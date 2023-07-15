@@ -68,10 +68,9 @@
     opacity: 1;
   }
 }
-
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: 'Wix Madefor Display', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
 }
