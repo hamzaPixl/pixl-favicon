@@ -63,3 +63,8 @@ Build files will end up in `/dist`.
 [flowbite]: https://flowbite.com/
 [yarn]: https://yarnpkg.com
 [npm]: https://www.npmjs.com
+
+## todos
+
+[] add script
+[] check intl usage
