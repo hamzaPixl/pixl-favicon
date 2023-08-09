@@ -1,11 +1,11 @@
-# Premier Art
+# Medistia
 
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/clevertech-be/medistia/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/clevertech-be/medistia/commits/master)
 
 <br />
 <p align="center">
-  <h3 align="center">Premier Art</h3>
+  <h3 align="center">Medistia</h3>
 
   <p align="center">
     <br />
