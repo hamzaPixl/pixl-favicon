@@ -72,11 +72,11 @@ Rachid Asli - rachid@clevertech.be
 
 # Component
 
-[] hero
 [] news card
 [] discipline card
 [] discipline list
 [] specialist list
+[] related news list
 [] usp
 [] timetable
 [] team memebr card
@@ -86,10 +86,12 @@ Rachid Asli - rachid@clevertech.be
 
 ## TimeSheet
 
-### 9/08 - 3h
+### 9/08 - 4h
 
 [x] header
 [x] footer
 [x] newslter card
 [x] recruit card
 [x] appointment card
+[x] hero
+[x] about card
