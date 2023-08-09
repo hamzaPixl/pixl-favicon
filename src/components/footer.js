@@ -45,7 +45,7 @@ export default function Footer() {
             {injected.sla.map((item, index) => (
               <Link
                 key={index}
-                className='text-primary-900 font-normal hover:font-bold  transition-all ease-in-out duration-300'
+                className='text-primary-900 font-normal hover:font-bold  transition-all ease-in-out duration-300 hover:underline hover:underline-offset-8'
                 href={item.link}
               >
                 {item.title}
