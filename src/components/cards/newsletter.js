@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useTranslate } from '../hooks/useTranslate'
-import NewsletterForm from './forms/newsletter'
+import { useTranslate } from '../../hooks/useTranslate'
+import NewsletterForm from '../forms/newsletter'
 
 export default function Newsletter() {
   const { t } = useTranslate()

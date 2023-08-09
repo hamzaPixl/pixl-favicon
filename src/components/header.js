@@ -1,11 +1,12 @@
 import React from 'react'
 import injected from '../injected.json'
 import Image from 'next/image'
-import { useLocale } from '../hooks/useLocale'
 import Link from 'next/link'
 import { useScrollPosition } from '../hooks/useScrollPostition'
 import { useTranslate } from '../hooks/useTranslate'
 import { useRouter } from 'next/router'
+import Button from './button'
+import { useLocale } from '../hooks/useLocale'
 
 export default function Header() {
   const { t } = useTranslate()
@@ -75,6 +76,9 @@ export default function Header() {
               {item}
             </a>
           ))}
+        </div>
+        <div className=''>
+          <Button message={t('header.appointment')} link='/appointment' />
         </div>
       </div>
     </nav>

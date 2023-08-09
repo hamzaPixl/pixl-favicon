@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-tailwind-boilerplate",
-  "short_name": "nextjs-tailwind-boilerplate",
-  "description": "Nextjs template using tailwindcss",
+  "name": "medistia",
+  "short_name": "medistia",
+  "description": "Medistia medical center",
   "icons": [
     {
       "src": "/favicon/android-chrome-36x36.png",

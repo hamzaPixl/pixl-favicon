@@ -1,70 +1,95 @@
-# Create Tailwind CSS Boilerplate
+# Premier Art
 
-A bare-bones Tailwind CSS boilerplate.
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/clevertech-be/medistia/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/clevertech-be/medistia/commits/master)
 
-It creates a simple React template with [Tailwind CSS][tailwind] support,
-served by [Flowbite][flowbite] and using [Nextjs][nextjs] as framework.
+<br />
+<p align="center">
+  <h3 align="center">Premier Art</h3>
 
-## Getting started
+  <p align="center">
+    <br />
+    <a href="https://github.com/clevertech-be/medistia/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://medistia.be/">View Demo</a>
+    ·
+    <a href="https://github.com/clevertech-be/medistia/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/clevertech-be/medistia/issues">Request Feature</a>
+  </p>
+</p>
 
-### Requirements
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#built with">Built with</a></li>
+    <li><a href="#contributting">Contributing</a></li>
+    <li><a href="#liscence">Liscence</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#link">Link</a></li>
+  </ol>
+</details>
 
-[Yarn][yarn] is suggested, but not required. The project will be set up with
-[npm][npm] if Yarn is not found.
+<br>
 
-### Create boilerplate
+## Author
 
-```bash
-yarn create nextjs-tailwind-boilerplate
+Hamza Mounir & Rachid Asli
 
-# or
+## Contributing
 
-npx create-nextjs-tailwind-boilerplate
-```
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Follow instructions at the prompt to create your project:
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-```bash
-? Name your project root directory my-project
-  ✔ Create directory structure
-  ✔ Create project files
-  ✔ Create templates
-  ✔ Set up dependencies
-```
+## License
 
-### Run server
+Distributed under the MIT License. See `LICENSE` for more information.
 
-```bash
-yarn dev
-```
+## Contact
 
-Open your favorite text editor and start coding!
+Hamza Mounir - hamza@clevertech.be
+Rachid Asli - rachid@clevertech.be
 
-## Build for production
+## Link
 
-```bash
-yarn build
-```
+# Pages
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[] home
+[] our centers
+[] news
+[] news [slug]
+[] about us
+[] specialists
+[] specialists [slug]
+[] disciplines
+[] disciplines [slug]
 
-You can start editing the page by modifying `src/pages/index.js`. The page auto-updates as you edit the file.
+# Component
 
-You can start editing the json configuration by modifying `src/pages/injected.json`. The page auto-updates as you edit the file.
+[] hero
+[] news card
+[] discipline card
+[] discipline list
+[] specialist list
+[] usp
+[] timetable
+[] team memebr card
+[] center card
+[] faq
+[] contact form
 
-Build files will end up in `/dist`.
+## TimeSheet
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository={{injected.settings.repository.url}}&utm_source=github&utm_medium={{injected.settings.repository.name}}&utm_campaign=devex-cs)
+### 9/08 - 3h
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/import?s={{injected.settings.repository.url}}&hasTrialAvailable=1&showOptionalTeamCreation=false&project-name={{injected.settings.repository.name}}&framework=nextjs&totalProjects=1&remainingProjects=1)
-
-[tailwind]: https://tailwindcss.com
-[nextjs]: https://parceljs.org
-[flowbite]: https://flowbite.com/
-[yarn]: https://yarnpkg.com
-[npm]: https://www.npmjs.com
-
-## todos
-
-[] add script
-[] check intl usage
+[x] header
+[x] footer
+[x] newslter card
+[x] recruit card
+[x] appointment card

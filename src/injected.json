@@ -1,12 +1,12 @@
 {
-  "keywords": ["boilerplate", "nextjs", "tailwindcss", "react"],
-  "title": "Nextjs boilderplate using tailwindcss",
-  "description": "Nextjs boilderplate using tailwindcss",
+  "keywords": ["medical", "center", "medistia", "psychologie"],
+  "title": "Medistia medical center",
+  "description": "Medistia medical center",
   "manifest": {
-    "projectShortName": "Nextjs boilderplate using tailwindcss",
+    "projectShortName": "Medistia medical center",
     "themeColor": "#ffffff",
-    "url": "https://www.example.com/",
-    "description": "Nextjs boilderplate using tailwindcss",
+    "url": "https://www.medistia.be/",
+    "description": "Medistia medical center",
     "display": "standalone",
     "orientation": "portrait",
     "backgroundColor": "#ffffff"
@@ -15,10 +15,12 @@
   "colors": {
     "global": "#000000",
     "globalText": "#ffffff",
+    "secondText": "#000000",
     "highlight": "#FFE58A",
-    "highlightText": "#000000",
+    "highlightText": "#76C0AB",
     "overlay": "#000000",
-    "background": "#76c0ab"
+    "background": "#76c0ab",
+    "accentBackground": "#58A78E"
   },
   "pages": [
     {
@@ -40,30 +42,48 @@
       }
     },
     {
-      "title": "link.mission",
-      "link": "/mission",
-      "meta": {
-        "title": "mission.meta.title",
-        "description": "mission.meta.description",
-        "keywords": ["mission", "values"]
-      }
-    },
-    {
-      "title": "link.projects",
-      "link": "/projects",
-      "meta": {
-        "title": "projects.meta.title",
-        "description": "projects.meta.description",
-        "keywords": ["projects"]
-      }
-    },
-    {
       "title": "link.contact",
       "link": "/contact",
       "meta": {
         "title": "contact.meta.title",
         "description": "contact.meta.description",
         "keywords": ["contact", "newsletter", "form"]
+      }
+    },
+    {
+      "title": "link.news",
+      "link": "/news",
+      "meta": {
+        "title": "news.meta.title",
+        "description": "news.meta.description",
+        "keywords": ["news", "blog"]
+      }
+    },
+    {
+      "title": "link.centers",
+      "link": "/centers",
+      "meta": {
+        "title": "centers.meta.title",
+        "description": "centers.meta.description",
+        "keywords": ["centers"]
+      }
+    },
+    {
+      "title": "link.specialists",
+      "link": "/specialists",
+      "meta": {
+        "title": "specialists.meta.title",
+        "description": "specialists.meta.description",
+        "keywords": ["specialists", "doctor"]
+      }
+    },
+    {
+      "title": "link.disciplines",
+      "link": "/disciplines",
+      "meta": {
+        "title": "disciplines.meta.title",
+        "description": "disciplines.meta.description",
+        "keywords": ["disciplines", "doctor"]
       }
     }
   ],
@@ -83,7 +103,7 @@
   ],
   "sla": [
     {
-      "title": "@ 2023 Clevertech",
+      "title": "@ 2023 Medistia SPRL",
       "link": "/"
     },
     {
@@ -100,12 +120,12 @@
     }
   ],
   "address": {
-    "url": "https://goo.gl/maps/xS8che1DjJgBenVd7",
-    "address": "Av. de la Couronne 227, 1050 Ixelles"
+    "url": "https://goo.gl/maps/3PUt1WiDQX2icvds5",
+    "address": "Chau. de Wavre 1341, 1160 Auderghem, Belgique"
   },
-  "tel": "+32 2 555 55 55",
-  "email": "example@example.com",
-  "tva": "BE 0000 000 000",
+  "tel": "+32474299576",
+  "email": "info@clevertech.be",
+  "tva": "BE 2220.556.668",
   "locales": ["fr", "nl", "en"],
   "defaultLocale": "en",
   "author": {
