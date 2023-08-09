@@ -41,7 +41,18 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <div className='flex gap-2 flex-row flex-wrap justify-center'>
+          <div className='font-bold'>
+            <div>{t('footer.recruit.title')}</div>
+            <div className='underline underline-offset-8 transition-all'>
+              <Link href={'/'}>{t('footer.recruit.headline')}</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='py-10 bg-accentBackground text-globalText text-xs md:text-md font-bold leading-normal'>
+        <div className='mx-auto md:max-w-screen-2xl flex flex-wrap items-center justify-between '>
+          <div className='flex flex-row items-center'>
             {injected.sla.map((item, index) => (
               <Link
                 key={index}

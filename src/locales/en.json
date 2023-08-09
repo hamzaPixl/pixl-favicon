@@ -13,10 +13,15 @@
   "projects.meta.description": "Our projects",
 
   "link.home": "Home",
-  "link.about": "About us",
   "link.mission": "Mission",
   "link.projects": "Projects",
   "link.contact": "Contact",
+  "link.news": "News",
+  "link.centers": "Our centers",
+  "link.recruit": "Recruit",
+  "link.about": "About us",
+  "link.specialists": "Specialists",
+  "link.disciplines": "Disciplines",
 
   "contact.form.success": "Your message has been sent successfully.",
   "contact.form.error": "There was an error while processing your request.",
@@ -29,10 +34,6 @@
   "contact.form.email.placeholder": "Your email",
   "contact.form.message": "Message",
   "contact.form.message.placeholder": "Your message",
-
-  "newsletter.title": "Subscribe to our newsletter",
-  "newsletter.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
-  "newsletter.button": "Stay in the loop",
 
   "projects.before": "Before",
   "projects.after": "After",
@@ -132,10 +133,36 @@
 
   "policy.cookie.title": "This website uses cookies to improve user experience.",
   "policy.cookie.text": "By using our website you consent to all cookies in accordance with our ",
+  "about.card.title": "About us",
+  "about.card.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec nisl mi. Donec vel viverra nulla, non lacinia est. Fusce posuere maximus elit non porta. Nullam posuere placerat nunc, in suscipit augue dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec nisl mi. Donec vel viverra nulla, non lacinia est. Fusce posuere maximus elit non porta. Nullam posuere placerat nunc, in suscipit augue dictum.",
+  "about.card.button": "Read more about us",
+  "about.card.secondButton": "Our medical centers",
+
+  "hero.button": "Our medical centers",
+  "hero.secondButton": "Make an appointment",
+
   "policy.cookie.page": "Cookie policy",
   "policy.privacy.page": "Privacy policy",
   "policy.terms.page": "Terms and Conditions",
+
+  "header.appointment": "Make an appointment",
+
+  "appointment.title": "Medistia recrute!",
+  "appointment.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec nisl mi. Donec vel viverra nulla, non lacinia est. Fusce posuere maximus elit non porta.",
+  "appointment.button": "Make an appointment",
+
+  "recruit.title": "Make your appointment online",
+  "recruit.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec nisl mi. Donec vel viverra nulla, non lacinia est. Fusce posuere maximus elit non porta.",
+  "recruit.button": "Email your candidature",
+
+  "footer.contact": "Contact",
+  "footer.socials": "Follow us on",
+  "footer.recruit.title": "Medistia recruits",
+  "footer.recruit.headline": "Apply here",
+
   "newsletter.form.success": "Your message has been sent successfully.",
   "newsletter.form.error": "There was an error while processing your request.",
-  "newsletter.email.placeholder": "Your Email"
+  "newsletter.title": "Subscribe to our newsletter",
+  "newsletter.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+  "newsletter.button": "Stay in the loop"
 }

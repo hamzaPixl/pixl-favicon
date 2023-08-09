@@ -72,16 +72,18 @@ Rachid Asli - rachid@clevertech.be
 
 # Component
 
+[] usp card
+[] faq
+[] team memebr card
 [] news card
 [] discipline card
+[] center card
+
+[] related news list
 [] discipline list
 [] specialist list
-[] related news list
-[] usp
+
 [] timetable
-[] team memebr card
-[] center card
-[] faq
 [] contact form
 
 ## TimeSheet
