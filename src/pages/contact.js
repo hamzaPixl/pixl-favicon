@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
-import Newsletter from '../components/newsletter'
+import Newsletter from '../components/cards/newsletter'
 import injected from '../injected.json'
 import ContactForm from '../components/forms/contact'
 import ContactHero from '../components/hero/contactHero'

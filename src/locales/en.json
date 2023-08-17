@@ -5,12 +5,16 @@
   "home.meta.description": "Welcome to Nextjs boilerplate from Clevertech",
   "contact.meta.title": "Contact us",
   "contact.meta.description": "Contact us",
-  "mission.meta.title": "Our mision and values",
-  "mission.meta.description": "Our mision and values",
   "about.meta.title": "More about us",
   "about.meta.description": "More about us",
-  "projects.meta.title": "Our projects",
-  "projects.meta.description": "Our projects",
+  "disciplines.meta.title": "All about our disciplines",
+  "disciplines.meta.description": "All about our disciplines",
+  "specialists.meta.title": "All about our specialists",
+  "specialists.meta.description": "All about our specialists",
+  "news.meta.title": "More news from us",
+  "news.meta.description": "More news from us",
+  "centers.meta.title": "Our centers",
+  "centers.meta.description": "Our centers",
 
   "link.home": "Home",
   "link.mission": "Mission",
@@ -35,67 +39,12 @@
   "contact.form.message": "Message",
   "contact.form.message.placeholder": "Your message",
 
-  "projects.before": "Before",
-  "projects.after": "After",
-  "projects.other": "Other projects",
-  "projects.plan": "The plans",
-  "projects.plan.description": "Introduction lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum.",
-  "projects.all": "Show all projects",
-
-  "projects.detail.location": "Location",
-  "projects.detail.area": "Area",
-  "projects.detail.status": "Status",
-
-  "projects.filter.all": "All projects",
-  "projects.filter.construction": "Construction",
-  "projects.filter.renovation": "Renovation",
-  "projects.filter.landscape": "Landscape",
-  "projects.filter.architecture": "Architecture",
-
-  "projects.title": "Our projects",
-  "projects.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
-
   "home.title": "Your project, your ideas, our expertise",
   "home.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
   "home.hero.primaryAction": "Get in touch",
   "home.about.title": "Nextjs boilerplate from Clevertech Architecture",
   "home.about.description": "An architectural firm that excels in refined simplicity. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula. Duis metus augue, cursus sit amet mattis sit amet, blandit at metus. Aenean velit dolor, feugiat vel sagittis sed, hendrerit sit amet tortor. Maecenas consectetur ornare porttitor. Duis pretium bibendum dui interdum auctor. Curabitur et maximus neque.",
   "home.about.primaryAction": "More about us",
-
-  "home.projects": "Show all projects",
-
-  "home.project.shortDescription": "Project description unknown",
-
-  "home.project1.title": "Project 1",
-  "home.project1.shortDescription": "Lorem ipsum dolor sit amet",
-  "home.project1.description": "An architectural firm that excels in refined simplicity. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula. Duis metus augue, cursus sit amet mattis sit amet, blandit at metus. Aenean velit dolor, feugiat vel sagittis sed, hendrerit sit amet tortor. Maecenas consectetur ornare porttitor. Duis pretium bibendum dui interdum auctor. Curabitur et maximus neque.",
-
-  "home.project2.title": "Project 2",
-  "home.project2.shortDescription": "Lorem ipsum dolor sit amet",
-  "home.project2.description": "An architectural firm that excels in refined simplicity. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula. Duis metus augue, cursus sit amet mattis sit amet, blandit at metus. Aenean velit dolor, feugiat vel sagittis sed, hendrerit sit amet tortor. Maecenas consectetur ornare porttitor. Duis pretium bibendum dui interdum auctor. Curabitur et maximus neque.",
-
-  "home.project3.title": "Project 3",
-  "home.project3.shortDescription": "Lorem ipsum dolor sit amet",
-  "home.project3.description": "An architectural firm that excels in refined simplicity. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula. Duis metus augue, cursus sit amet mattis sit amet, blandit at metus. Aenean velit dolor, feugiat vel sagittis sed, hendrerit sit amet tortor. Maecenas consectetur ornare porttitor. Duis pretium bibendum dui interdum auctor. Curabitur et maximus neque.",
-
-  "home.project4.title": "Project 4",
-  "home.project4.description": "Lorem ipsum dolor sit amet",
-  "home.project5.title": "Project 5",
-  "home.project5.description": "Lorem ipsum dolor sit amet",
-  "home.project6.title": "Project 6",
-  "home.project6.description": "Lorem ipsum dolor sit amet",
-  "home.project7.title": "Project 7",
-  "home.project7.description": "Lorem ipsum dolor sit amet",
-  "home.project8.title": "Project 8",
-  "home.project8.description": "Lorem ipsum dolor sit amet",
-  "home.project9.title": "Project 9",
-  "home.project9.description": "Lorem ipsum dolor sit amet",
-  "home.project10.title": "Project 10",
-  "home.project10.description": "Lorem ipsum dolor sit amet",
-  "home.project11.title": "Project 11",
-  "home.project11.description": "Lorem ipsum dolor sit amet",
-  "home.project12.title": "Project 12",
-  "home.project12.description": "Lorem ipsum dolor sit amet",
 
   "contact.card.title": "Nextjs boilerplate from Clevertech",
   "contact.card.action": "Make an appointement",
@@ -105,31 +54,6 @@
   "about.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
   "about.hero.primaryAction": "Get in touch",
   "about.hero.secondaryAction": "Make an appointement",
-
-  "about.quote1.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit, magna ac elementum ullamcorper.",
-  "about.quote1.source": "Jurica Koletic - Founder & CEO",
-
-  "about.team.member1.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit, magna ac elementum ullamcorper, leo arcu luctus mi, at eleifend quam ligula vel risus. Cras faucibus, neque ultricies hendrerit pellentesque, metus purus ullamcorper odio, sed sodales nibh urna ut felis.",
-  "about.team.member2.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit, magna ac elementum ullamcorper, leo arcu luctus mi, at eleifend quam ligula vel risus. Cras faucibus, neque ultricies hendrerit pellentesque, metus purus ullamcorper odio, sed sodales nibh urna ut felis.",
-  "about.team.member3.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit, magna ac elementum ullamcorper, leo arcu luctus mi, at eleifend quam ligula vel risus. Cras faucibus, neque ultricies hendrerit pellentesque, metus purus ullamcorper odio, sed sodales nibh urna ut felis.",
-
-  "mission.title": "Our mission",
-  "mission.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
-
-  "mission.1.title": "First meeting",
-  "mission.1.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
-  "mission.2.title": "Programmation",
-  "mission.2.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
-  "mission.3.title": "Sketches",
-  "mission.3.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
-  "mission.4.title": "Preparations",
-  "mission.4.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
-  "mission.5.title": "Urbnan planning permit",
-  "mission.5.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
-  "mission.6.title": "Excuting the project",
-  "mission.6.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
-  "mission.7.title": "Worksite",
-  "mission.7.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
 
   "policy.cookie.title": "This website uses cookies to improve user experience.",
   "policy.cookie.text": "By using our website you consent to all cookies in accordance with our ",
@@ -164,5 +88,6 @@
   "newsletter.form.error": "There was an error while processing your request.",
   "newsletter.title": "Subscribe to our newsletter",
   "newsletter.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
-  "newsletter.button": "Stay in the loop"
+  "newsletter.button": "Stay in the loop",
+  "newsletter.email.placeholder": "Your email"
 }

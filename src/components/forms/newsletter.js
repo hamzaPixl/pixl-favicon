@@ -12,7 +12,7 @@ export default function NewsletterForm({ formSuccess, handleSubmit, formError })
           type='email'
           name='email'
           placeholder={t('newsletter.email.placeholder')}
-          className='md:w-2/3 border-2 bg-primary-900 text-white focus:border-white focus:ring-white border-white rounded-sm'
+          className='md:w-2/3 border-2 bg-primary-900 text-white focus:border-white focus:ring-white border-white rounded-sm placeholder:text-white'
         />
         <Button message={t('newsletter.button')} type='submit' />
       </div>

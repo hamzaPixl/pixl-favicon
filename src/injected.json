@@ -33,6 +33,25 @@
       }
     },
     {
+      "title": "link.disciplines",
+      "link": "/disciplines",
+      "meta": {
+        "title": "disciplines.meta.title",
+        "description": "disciplines.meta.description",
+        "keywords": ["disciplines", "doctor"]
+      }
+    },
+    {
+      "title": "link.specialists",
+      "link": "/specialists",
+      "meta": {
+        "title": "specialists.meta.title",
+        "description": "specialists.meta.description",
+        "keywords": ["specialists", "doctor"]
+      }
+    },
+
+    {
       "title": "link.about",
       "link": "/about",
       "meta": {
@@ -66,24 +85,6 @@
         "title": "centers.meta.title",
         "description": "centers.meta.description",
         "keywords": ["centers"]
-      }
-    },
-    {
-      "title": "link.specialists",
-      "link": "/specialists",
-      "meta": {
-        "title": "specialists.meta.title",
-        "description": "specialists.meta.description",
-        "keywords": ["specialists", "doctor"]
-      }
-    },
-    {
-      "title": "link.disciplines",
-      "link": "/disciplines",
-      "meta": {
-        "title": "disciplines.meta.title",
-        "description": "disciplines.meta.description",
-        "keywords": ["disciplines", "doctor"]
       }
     }
   ],
@@ -123,6 +124,7 @@
     "url": "https://goo.gl/maps/3PUt1WiDQX2icvds5",
     "address": "Chau. de Wavre 1341, 1160 Auderghem, Belgique"
   },
+  "companyName": "Medistia SRL",
   "tel": "+32474299576",
   "email": "info@clevertech.be",
   "tva": "BE 2220.556.668",

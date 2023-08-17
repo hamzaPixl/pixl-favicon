@@ -82,7 +82,8 @@ module.exports = {
       'primary-600': '#545454',
       'primary-700': '#383838',
       'primary-800': '#1C1C1C',
-      'primary-900': '#000000',
+      'primary-900': '#76c0ab',
+      'primary-accent-900': '#58A78E',
     },
     extend: {
       display: ['group-hover'],

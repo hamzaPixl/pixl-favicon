@@ -3,34 +3,27 @@ import injected from '../injected.json'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslate } from '../hooks/useTranslate'
-import { useRouter } from 'next/router'
+import { HeaderContent } from './header'
 
 export default function Footer() {
   const { t } = useTranslate()
-  const router = useRouter()
 
   return (
-    <footer className='bg-white'>
-      <div className='max-w-screen-xl 2xl:max-w-screen-2xl flex gap-4 flex-col md:flex-row flex-wrap items-center justify-between mx-auto py-2 px-5 md:py-8 md:px-16 text-gray-900 text-xs md:text-base leading-normal font-bold'>
-        <div className='flex gap-2 flex-col md:flex-row items-center'>
-          <div className='sm:hidden flex flex-row flex-wrap gap-2 items-center mb-5'>
-            {injected.pages.map((item, index) => (
-              <Link
-                key={index}
-                className={`${
-                  router.route === item.link
-                    ? 'text-primary-900 underline-offset-8 underline'
-                    : 'text-gray-400'
-                } hover:text-primary-900 hover:underline-offset-8 hover:underline cursor-pointer transition-all`}
-                href={item.link}
-              >
-                {t(item.title)}
-              </Link>
-            ))}
-          </div>
+    <footer className='bg-primary-900 text-white text-base'>
+      <div
+        className={`max-w-screen-xl 2xl:max-w-screen-2xl px-6 md:px-16 flex flex-col gap-5 items-start justify-between mx-auto font-bold leading-normal mb-20`}
+      >
+        <HeaderContent />
+        <div className='flex flex-col justify-start items-start gap-2 font-normal text-white'>
+          <div className='font-bol'>{injected.companyName}</div>
+          <div>{injected.address.address}</div>
+          <div>{injected.tva}</div>
+        </div>
+        <div className='w-full flex flex-row gap-4 justify-between items-end'>
           <div className='flex gap-2 flex-row flex-wrap'>
+            <div>Follow us on</div>
             {injected.socials.map((item, index) => (
-              <Link key={index} className='text-primary-900' href={item.link}>
+              <Link key={index} className='text-white' href={item.link}>
                 <Image
                   loading='lazy'
                   width={20}
@@ -41,7 +34,7 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <div className='font-bold'>
+          <div className='flex gap-2 flex-col flex-wrap font-bold'>
             <div>{t('footer.recruit.title')}</div>
             <div className='underline underline-offset-8 transition-all'>
               <Link href={'/'}>{t('footer.recruit.headline')}</Link>
@@ -49,26 +42,25 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      <div className='py-10 bg-accentBackground text-globalText text-xs md:text-md font-bold leading-normal'>
-        <div className='mx-auto md:max-w-screen-2xl flex flex-wrap items-center justify-between '>
-          <div className='flex flex-row items-center'>
+      <div className='bg-primary-accent-900'>
+        <div className='max-w-screen-xl 2xl:max-w-screen-2xl px-6 md:px-16 mx-auto font-bold leading-normal flex gap-4 justify-between items-center flex-wrap'>
+          <div className='flex flex-row items-center gap-4 py-10'>
             {injected.sla.map((item, index) => (
               <Link
                 key={index}
-                className='text-primary-900 font-normal hover:font-bold  transition-all ease-in-out duration-300 hover:underline hover:underline-offset-8'
+                className='font-normal hover:font-bold transition-all ease-in-out duration-300 hover:underline hover:underline-offset-8'
                 href={item.link}
               >
                 {item.title}
               </Link>
             ))}
           </div>
-        </div>
-        <div className='uppercase text-gray-400'>
-          Made with love by{' '}
-          <Link className='text-primary-900' href={injected.author.url}>
-            {injected.author.name}
-          </Link>
+          <div className='uppercase text-gray-300'>
+            Made with love by{' '}
+            <Link className='text-white' href={injected.author.url}>
+              {injected.author.name}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
