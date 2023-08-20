@@ -1,0 +1,46 @@
+export const filters = [
+  'articles.filter.topic.2',
+  'articles.filter.topic.3',
+  'articles.filter.topic.1',
+  'articles.filter.topic.4',
+  'articles.filter.topic.5',
+]
+
+export const allArticles = [
+  {
+    name: 'article1',
+    title: 'article1.title',
+    shortDescription: 'article1.shortDescription',
+    description: 'article1.description',
+    location: 'Wemmel, Brussels',
+    status: 'In progress',
+    date: '12/01/2020',
+    defaultImage: '/images/article/article1.png',
+    link: '/news/article1',
+    topic: 'articles.filter.topic.1',
+  },
+  {
+    name: 'article2',
+    title: 'article1.title',
+    shortDescription: 'article1.shortDescription',
+    description: 'article1.description',
+    location: 'Wemmel, Brussels',
+    status: 'In progress',
+    date: '22/02/2020',
+    defaultImage: '/images/article/article1.png',
+    link: '/news/article2',
+    topic: 'articles.filter.topic.2',
+  },
+  {
+    name: 'article3',
+    title: 'article1.title',
+    shortDescription: 'article1.shortDescription',
+    description: 'article1.description',
+    location: 'Wemmel, Brussels',
+    status: 'In progress',
+    date: '22/02/2020',
+    defaultImage: '/images/article/article1.png',
+    link: '/news/article3',
+    topic: 'articles.filter.topic.3',
+  },
+]

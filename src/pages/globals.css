@@ -71,7 +71,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
 }

@@ -2,56 +2,54 @@ import React from 'react'
 import injected from '../injected.json'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useScrollPosition } from '../hooks/useScrollPostition'
 import { useTranslate } from '../hooks/useTranslate'
 import { useRouter } from 'next/router'
 import Button from './button'
+import Burger from './burger'
 
-export function HeaderContent() {
+export default function Header({ setNavbarOpen, navbarOpen }) {
   const { t } = useTranslate()
   const router = useRouter()
   return (
-    <div className='w-full flex gap-2 flex-wrap items-center justify-between'>
-      <Link href={'/'} className='w-[138px] h-[72px] sm:w-[216px] sm:h-[112px] relative'>
-        <Image loading='lazy' fill src='/logo.svg' alt={`Logo`} />
-      </Link>
-      <div className='flex flex-row flex-wrap gap-2 md:gap-4 items-center'>
-        {injected.pages.map((item, index) => (
-          <Link
-            key={index}
-            className={`${
-              router.route === item.link ? 'underline-offset-8 underline' : ''
-            } text-white  hover:underline-offset-8 hover:underline cursor-pointer transition-all`}
-            href={item.link}
-          >
-            {t(item.title)}
-          </Link>
-        ))}
-        <Button message={t('header.appointment')} link='/appointment' />
-      </div>
-    </div>
-  )
-}
-
-export default function Header() {
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
-
-  const scrollPosition = useScrollPosition()
-
-  return (
     <nav
-      className={classNames(
-        scrollPosition > 0 ? 'sm:py-10 py-[20px]' : 'sm:py-20 py-[20px]',
-        'bg-primary-900 text-white',
-        'z-50 sticky top-0 mx-auto overflow-auto transition-all duration-300 ease-in-out',
-      )}
+      className={
+        'z-50 sticky top-0 mx-auto overflow-auto transition-all duration-300 ease-in-out bg-primary-700 text-white text-base p-6 md:p-8'
+      }
     >
-      <div
-        className={`max-w-screen-xl 2xl:max-w-screen-2xl px-6 md:px-16  mx-auto text-sm font-bold leading-normal`}
-      >
-        <HeaderContent />
+      <div className={`max-w-screen-xl mx-auto`}>
+        <div className='font-bold leading-normal w-full flex flex-row gap-2 items-center justify-between'>
+          <Link href={'/'} className='w-[182px] h-[56px] md:h-[70px] md:w-[228px] relative'>
+            <Image loading='lazy' fill src='/logo.svg' alt={`Logo`} />
+          </Link>
+          <div className='hidden lg:flex flex-row gap-4 xl:gap-6 items-center'>
+            {injected.pages.map((item, index) => (
+              <Link
+                key={index}
+                className={`${
+                  router.route === item.link ? 'underline-offset-8 underline' : ''
+                } text-white  hover:underline-offset-8 hover:underline cursor-pointer transition-all`}
+                href={item.link}
+              >
+                {t(item.title)}
+              </Link>
+            ))}
+            <div className='hidden xl:block'>
+              <Button message={t('header.appointment')} link='/appointment' />
+            </div>
+          </div>
+          <div className='block lg:hidden'>
+            <Link
+              href={'/'}
+              className='relative'
+              onClick={(e) => {
+                e.preventDefault()
+                setNavbarOpen(!navbarOpen)
+              }}
+            >
+              <Burger navbarOpen={navbarOpen} />
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
   )

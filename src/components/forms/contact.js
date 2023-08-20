@@ -9,12 +9,12 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
       <h1 className='text-2xl md:text-4xl font-bold'>{t('contact.form.title')}</h1>
       <div className='max-w-xl'>{t('contact.form.description')}</div>
       {formSuccess && (
-        <div className='transition-all text-lg bg-green-500 rounded-sm text-white p-10'>
+        <div className='transition-all text-lg bg-green-500 rounded-xl text-white p-10'>
           {formSuccess.message}
         </div>
       )}
       {formError && (
-        <div className='transition-all text-lg bg-red-500 rounded-sm text-white p-10'>
+        <div className='transition-all text-lg bg-red-500 rounded-xl text-white p-10'>
           {formError.message}
         </div>
       )}
@@ -28,7 +28,7 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
                 <input
                   type='text'
                   name='name'
-                  className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900/50 rounded-sm'
+                  className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900/50 rounded-xl'
                 />
               </div>
               <div className='flex flex-col gap-2 justify-start'>
@@ -36,7 +36,7 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
                 <input
                   type='email'
                   name='email'
-                  className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900/50 rounded-sm'
+                  className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900/50 rounded-xl'
                 />
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
               <label className='font-bold'>{t('contact.form.message')}</label>
               <textarea
                 name='message'
-                className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900 rounded-sm h-full'
+                className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900 rounded-xl h-full'
               ></textarea>
             </div>
           </div>

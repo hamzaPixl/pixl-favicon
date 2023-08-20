@@ -61,15 +61,6 @@
       }
     },
     {
-      "title": "link.contact",
-      "link": "/contact",
-      "meta": {
-        "title": "contact.meta.title",
-        "description": "contact.meta.description",
-        "keywords": ["contact", "newsletter", "form"]
-      }
-    },
-    {
       "title": "link.news",
       "link": "/news",
       "meta": {

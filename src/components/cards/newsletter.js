@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslate } from '../../hooks/useTranslate'
 import NewsletterForm from '../forms/newsletter'
+import InfoBox from './infoBox'
 
 export default function Newsletter() {
   const { t } = useTranslate()
@@ -27,11 +28,7 @@ export default function Newsletter() {
       })
   }
   return (
-    <div className='text-white w-full bg-primary-900 py-8 px-10 flex flex-col xl:flex-row flew-wrap gap-4 items-center justify-between'>
-      <div className='flex flex-col gap-3 flex-wrap items-start'>
-        <div className='text-2xl sm:text-3xl font-bold leading-tight'>{t('newsletter.title')}</div>
-        <div className='text-base font-normal leading-normal'>{t('newsletter.description')}</div>
-      </div>
+    <InfoBox title={t('newsletter.title')} description={t('newsletter.description')}>
       <div className='w-full'>
         <NewsletterForm
           formSuccess={formSuccess}
@@ -39,6 +36,6 @@ export default function Newsletter() {
           formError={formError}
         />
       </div>
-    </div>
+    </InfoBox>
   )
 }
