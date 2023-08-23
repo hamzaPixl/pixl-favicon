@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
       </div>
       <div className='p-6 md:p-8 w-full max-w-screen-xl mx-auto font-bold flex flex-col md:flex-row gap-10 md:gap-5 items-center md:items-end justify-between'>
-        <div className='flex gap-2 flex-col items-start lg:hidden'>
+        <div className='flex gap-2 flex-col items-center md:items-start lg:hidden'>
           {injected.pages.map((item, index) => (
             <Link
               key={index}

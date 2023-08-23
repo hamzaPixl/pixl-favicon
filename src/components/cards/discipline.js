@@ -5,10 +5,10 @@ import React from 'react'
 export default function DisciplineCard({ title, link, image }) {
   return (
     <div className='group text-black cursor-pointer shadow-lg rounded-xl'>
-      <div className='group-hover:transition-all group-hover:scale-105 group-hover:duration-300 duration-300 py-10 px-6'>
+      <div className='group-hover:transition-all group-hover:scale-105 group-hover:duration-300 duration-300 py-5 lg:py-10 px-6'>
         <Link href={link}>
           <div className='bg-white flex flex-row md:flex-col gap-2 items-center justify-between md:items-start'>
-            <div className='flex flex-row md:flex-col gap-2 items-center md:items-start'>
+            <div className='flex flex-row lg:flex-col gap-2 items-center md:items-start'>
               <Image
                 loading='lazy'
                 width={32}
@@ -17,7 +17,7 @@ export default function DisciplineCard({ title, link, image }) {
                 alt='Discipline illustration'
                 src={image}
               />
-              <div className='text-black font-bold text-2xl'>{title}</div>
+              <div className='text-black font-bold text-base md:text-xl xl:text-2xl'>{title}</div>
             </div>
             <div className='flex md:hidden'>
               <Image

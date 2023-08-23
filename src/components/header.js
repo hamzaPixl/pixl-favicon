@@ -16,7 +16,7 @@ export default function Header({ setNavbarOpen, navbarOpen }) {
         'z-50 sticky top-0 mx-auto overflow-auto transition-all duration-300 ease-in-out bg-primary-700 text-white'
       }
     >
-      <div className={`md:p-8 w-full max-w-screen-xl mx-auto`}>
+      <div className={`p-4 md:p-8 w-full max-w-screen-xl mx-auto`}>
         <div className='font-bold leading-normal w-full flex flex-row gap-2 items-center justify-between'>
           <Link href={'/'} className='w-[182px] h-[56px] md:h-[70px] md:w-[228px] relative'>
             <Image loading='lazy' fill src='/logo.svg' alt={`Logo`} />
@@ -40,7 +40,7 @@ export default function Header({ setNavbarOpen, navbarOpen }) {
           <div className='block lg:hidden'>
             <Link
               href={'/'}
-              className='relative'
+              className='relative w-5 h-5 cursor-pointer'
               onClick={(e) => {
                 e.preventDefault()
                 setNavbarOpen(!navbarOpen)
