@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
 import Newsletter from '../components/cards/newsletter'
-import injected from '../injected.json'
 import ContactForm from '../components/forms/contact'
-import ContactHero from '../components/hero/contactHero'
 import { useTranslate } from '../hooks/useTranslate'
 
 export default function Contact() {
@@ -33,15 +31,6 @@ export default function Contact() {
 
   return (
     <Layout>
-      <ContactHero
-        backgroundImage={`/images/hero/hero-about.png`}
-        address={injected.address.address}
-        addressLink={injected.address.url}
-        contactLink={'/contact'}
-        phone={injected.tel}
-        email={injected.email}
-        tva={injected.tva}
-      />
       <ContactForm handleSubmit={handleSubmit} formSuccess={formSuccess} formError={formError} />
       <Newsletter />
     </Layout>
