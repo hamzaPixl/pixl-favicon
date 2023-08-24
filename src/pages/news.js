@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { allArticles, filters } from '../api/articles'
 import Newsletter from '../components/cards/newsletter'
+import Container from '../components/container'
 
 export default function News() {
   const router = useRouter()
@@ -16,9 +17,7 @@ export default function News() {
   useEffect(() => {
     if (router.query.filter?.length > 0) {
       const filter = allArticles.find((item) => item.topic === router.query.filter)
-      console.log(filter)
       if (filter) {
-        console.log(allArticles.filter((item) => item.topic === filter.topic))
         setFilter(filter.topic)
         setArticles(allArticles.filter((item) => item.topic === filter.topic) || [])
       } else {
@@ -29,33 +28,42 @@ export default function News() {
 
   return (
     <Layout>
-      <div className='flex flex-col flex-wrap gap-4 w-full md:pt-24'>
-        <div className='text-2xl xl:text-4xl font-bold'>{t('articles.title')}</div>
-        <div className='text-base font-normal max-w-2xl'>{t('articles.description')}</div>
-        <div className='flex flex-col md:flex-row text-primary-500'>
-          {filters.map((item, index) => (
-            <Link key={index} href={`/news?filter=${item}`}>
-              <div
-                className={`transition-all cursor-pointer text-base pr-5 mb-5 md:m-0 ${
-                  item === filter && 'font-bold underline underline-offset-8 text-primary-900'
-                } hover:font-bold hover:underline-offset-8 hover:underline hover:text-primary-900`}
-              >
-                {t(item)}
-              </div>
-            </Link>
-          ))}
+      <Container>
+        <div className='flex flex-col items-start justify-between  gap-4 w-full'>
+          <div className='text-2xl xl:text-4xl font-bold'>{t('articles.title')}</div>
+          <div className='text-base font-normal max-w-2xl'>{t('articles.description')}</div>
+          <div className='flex flex-col md:flex-row text-primary-500'>
+            {filters.map((item, index) => (
+              <Link key={index} href={`/news?filter=${item}`}>
+                <div
+                  className={`transition-all cursor-pointer text-base pr-5 mb-5 text-black md:m-0 ${
+                    item === filter && 'font-bold underline underline-offset-8 text-primary-900'
+                  } hover:font-bold hover:underline-offset-8 hover:underline`}
+                >
+                  {t(item)}
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div className='my-10 items-center w-full'>
-        <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-4'>
-          {articles.map((item, index) => (
-            <ArticleCard key={index} article={item} />
-          ))}
+        <div className='items-center w-full'>
+          <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-4'>
+            {articles.map((article) => (
+              <ArticleCard
+                key={article.name}
+                title={t(article.title)}
+                topic={t(article.topic)}
+                link={article.link}
+                date={article.date}
+                image={article.defaultImage}
+              />
+            ))}
+          </div>
         </div>
-      </div>
 
-      <Newsletter />
+        <Newsletter />
+      </Container>
     </Layout>
   )
 }

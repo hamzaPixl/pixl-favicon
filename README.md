@@ -61,9 +61,7 @@ Rachid Asli - rachid@clevertech.be
 # Pages
 
 [] our centers
-[] news
 [] news [slug]
-[] about us
 [] specialists
 [] specialists [slug]
 [] disciplines
@@ -72,12 +70,9 @@ Rachid Asli - rachid@clevertech.be
 # Component
 
 [] faq
-[] team memebr card
 [] center card
-
 [] discipline list
 [] specialist list
-
 [] timetable
 [] contact form
 
@@ -97,9 +92,13 @@ Rachid Asli - rachid@clevertech.be
   - [x] recruit
   - [x] appointment
 
-### 23/08 - 3h
+### 23/08 - 5h
 
 [x] home
 [x] contact card
 [x] hero
 [x] responsive
+[x] news
+
+[] correct intl
+[] move component to separeted file
