@@ -23,8 +23,10 @@ export default function SEO() {
 
   const image = pageInfo?.image || injected.manifest.icon
   const meta = [{ name: 'keywords', content: injected.keywords.concat(pageInfo?.meta?.keywords) }]
-  const title = t(pageInfo?.meta?.title) || injected.title
-  const description = t(pageInfo?.meta?.description) || injected.description
+  const title = pageInfo?.meta?.title ? t(pageInfo?.meta?.title) : injected.title
+  const description = pageInfo?.meta?.description
+    ? t(pageInfo?.meta?.description)
+    : injected.description
 
   const metaData = [
     {
@@ -123,10 +125,4 @@ export default function SEO() {
       ))}
     </Head>
   )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
 }

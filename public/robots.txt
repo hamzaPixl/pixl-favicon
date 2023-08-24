@@ -2,10 +2,8 @@
 User-agent: *
 Allow: /
 
-# TODO: change host to your own domain
 # Host
-Host: http://example.com/
+Host: http://preview.medistia.com
 
-# TODO: change host to your own domain
 # Sitemaps
-Sitemap: http://example.com/sitemap.xml
+Sitemap: http://preview.medistia.com/sitemap.xml

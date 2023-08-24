@@ -60,7 +60,6 @@ Rachid Asli - rachid@clevertech.be
 
 # Pages
 
-[] home
 [] our centers
 [] news
 [] news [slug]
@@ -97,3 +96,10 @@ Rachid Asli - rachid@clevertech.be
   - [x] newsletter
   - [x] recruit
   - [x] appointment
+
+### 23/08 - 3h
+
+[x] home
+[x] contact card
+[x] hero
+[x] responsive

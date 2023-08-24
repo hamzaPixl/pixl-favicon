@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: 7,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'formatjs'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
