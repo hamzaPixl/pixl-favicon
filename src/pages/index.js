@@ -115,7 +115,7 @@ export default function Home() {
             {allArticles.slice(0, 3).map((article) => (
               <ArticleCard
                 key={article.name}
-                title={t(article.title)}
+                title={article.title}
                 topic={t(article.topic)}
                 link={article.link}
                 date={article.date}

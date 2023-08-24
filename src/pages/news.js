@@ -16,13 +16,12 @@ export default function News() {
 
   useEffect(() => {
     if (router.query.filter?.length > 0) {
+      setFilter(router.query.filter)
       const filter = allArticles.find((item) => item.topic === router.query.filter)
-      if (filter) {
-        setFilter(filter.topic)
-        setArticles(allArticles.filter((item) => item.topic === filter.topic) || [])
-      } else {
-        setArticles([])
+      if (router.query.filter === filters[0]) {
+        return setArticles(allArticles)
       }
+      setArticles(allArticles.filter((item) => item.topic === filter?.topic) || [])
     }
   }, [router.query])
 
@@ -52,7 +51,7 @@ export default function News() {
             {articles.map((article) => (
               <ArticleCard
                 key={article.name}
-                title={t(article.title)}
+                title={article.title}
                 topic={t(article.topic)}
                 link={article.link}
                 date={article.date}

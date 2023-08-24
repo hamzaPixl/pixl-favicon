@@ -81,13 +81,13 @@ export const allDisciplines = [
     link: '/disciplines/Logopede',
   },
   {
-    name: 'Ppthalmo',
+    name: 'Opthalmo',
     title: 'disciplines.discipline10.title',
     shortDescription: 'disciplines.discipline10.shortDescription',
     description: 'disciplines.discipline10.description',
     defaultImage: '/images/discipline/discipline10.png',
-    defaultIcon: '/icons/discipline/Ppthalmo.svg',
-    link: '/disciplines/Ppthalmo',
+    defaultIcon: '/icons/discipline/Opthalmo.svg',
+    link: '/disciplines/Opthalmo',
   },
   {
     name: 'Pneumo',

@@ -149,8 +149,5 @@
   "articles.filter.topic.4": "Press",
   "articles.filter.topic.5": "Publications",
   "articles.title": "News",
-  "articles.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
-  "article1.title": "Lorem ipsum dolor ...",
-  "article1.shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "article1.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat."
+  "articles.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat."
 }
