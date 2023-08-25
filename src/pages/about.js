@@ -52,21 +52,23 @@ export default function About() {
           </div>
         </div>
       </Container>
-      <Container>
-        <div className='flex flex-col items-start gap-4 w-full'>
-          <div className='text-2xl lg:text-4xl font-bold'>Nos membres</div>
-          <div className='max-w-xl text-base'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+      <div className='bg-gray-100'>
+        <Container>
+          <div className='flex flex-col items-start gap-4 w-full'>
+            <div className='text-2xl lg:text-4xl font-bold'>Nos membres</div>
+            <div className='max-w-xl text-base'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            </div>
           </div>
-        </div>
-        <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-4 gap-4 w-full'>
-          <TeamMember name='John Doe' role='CEO' image='/images/team/john-doe.png' />
-          <TeamMember name='John Doe' role='CEO' image='/images/team/john-doe.png' />
-          <TeamMember name='John Doe' role='CEO' image='/images/team/john-doe.png' />
-          <TeamMember name='John Doe' role='CEO' image='/images/team/john-doe.png' />
-        </div>
-        <Newsletter />
-      </Container>
+          <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-4 gap-4 w-full'>
+            <TeamMember name='John Doe' role='CEO' image='/images/team/john-doe.png' />
+            <TeamMember name='John Doe' role='CEO' image='/images/team/john-doe.png' />
+            <TeamMember name='John Doe' role='CEO' image='/images/team/john-doe.png' />
+            <TeamMember name='John Doe' role='CEO' image='/images/team/john-doe.png' />
+          </div>
+          <Newsletter />
+        </Container>
+      </div>
     </Layout>
   )
 }

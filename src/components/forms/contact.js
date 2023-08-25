@@ -5,7 +5,7 @@ import { useTranslate } from '../../hooks/useTranslate'
 export default function ContactForm({ formSuccess, handleSubmit, formError }) {
   const { t } = useTranslate()
   return (
-    <div className='text-primary-900 gap-4 flex flex-col justify-between items-left text-base font-normal w-full my-10 px-10'>
+    <div className='text-black gap-4 flex flex-col justify-between items-left text-base font-normal w-full'>
       <h1 className='text-2xl md:text-4xl font-bold'>{t('contact.form.title')}</h1>
       <div className='max-w-xl'>{t('contact.form.description')}</div>
       {formSuccess && (
@@ -20,31 +20,52 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
       )}
       {
         <form method='POST' onSubmit={handleSubmit} name='contact' netlify='true'>
-          <div className='flex flex-col lg:flex-row justify-between gap-4 w-full pb-10'>
-            <div className='flew flex-col gap-4 flex-wrap lg:w-1/2'>
-              <div className='flex flex-col gap-2 justify-start'>
-                <input type='hidden' name='form-name' value='contact' />
-                <label className='font-bold'>{t('contact.form.name')}</label>
+          <div className='flex flex-col justify-between gap-4 w-full pb-10'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4 w-full'>
+              <div className='flex flex-col gap-2 justify-start w-full'>
+                <input type='hidden' name='form-firstName' value='contact' />
+                <label className='font-bold'>{t('contact.form.firstName')}</label>
                 <input
                   type='text'
-                  name='name'
-                  className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900/50 rounded-xl'
+                  name='firstName'
+                  className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
                 />
               </div>
-              <div className='flex flex-col gap-2 justify-start'>
+              <div className='flex flex-col gap-2 justify-start w-full'>
+                <input type='hidden' name='form-lastName' value='contact' />
+                <label className='font-bold'>{t('contact.form.lastName')}</label>
+                <input
+                  type='text'
+                  name='lastName'
+                  className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
+                />
+              </div>
+            </div>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4 w-full'>
+              <div className='flex flex-col gap-2 justify-start w-full'>
+                <input type='hidden' name='form-phone' value='contact' />
+                <label className='font-bold'>{t('contact.form.phone')}</label>
+                <input
+                  type='text'
+                  name='phone'
+                  className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
+                />
+              </div>
+              <div className='flex flex-col gap-2 justify-start w-full'>
+                <input type='hidden' name='form-email' value='contact' />
                 <label className='font-bold'>{t('contact.form.email')}</label>
                 <input
                   type='email'
                   name='email'
-                  className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900/50 rounded-xl'
+                  className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
                 />
               </div>
             </div>
-            <div className='flex flex-col gap-2 justify-start lg:w-1/2'>
+            <div className='flex flex-col gap-2 justify-start w-full'>
               <label className='font-bold'>{t('contact.form.message')}</label>
               <textarea
                 name='message'
-                className='border-2 focus:border-primary-900 focus:ring-primary-900 border-primary-900 rounded-xl h-full'
+                className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
               ></textarea>
             </div>
           </div>

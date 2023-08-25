@@ -70,12 +70,12 @@
       }
     },
     {
-      "title": "link.centers",
-      "link": "/centers",
+      "title": "link.contact",
+      "link": "/contact",
       "meta": {
-        "title": "centers.meta.title",
-        "description": "centers.meta.description",
-        "keywords": ["centers"]
+        "title": "contact.meta.title",
+        "description": "contact.meta.description",
+        "keywords": ["contact"]
       }
     }
   ],
