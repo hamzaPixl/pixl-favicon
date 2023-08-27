@@ -52,7 +52,7 @@ export default function Home() {
                   alt='Contact mail illustration'
                   src={'/icons/mail.svg'}
                 />
-                <Link href='mailto:example@gmail.Com'>example@gmail.Com</Link>
+                <Link href='mailto:example@gmail.com'>example@gmail.com</Link>
               </div>
             </div>
           </div>

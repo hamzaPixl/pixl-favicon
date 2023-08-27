@@ -1,14 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../components/layout'
 import Container from '../components/container'
 import { allDisciplines } from '../api/disciplines'
-import DisciplineCard from '../components/cards/discipline'
+import DisciplineCard, { DisciplineListCard } from '../components/cards/discipline'
 import { useTranslate } from '../hooks/useTranslate'
-import InfoBox from '../components/cards/infoBox'
+import InfoBox, { InfoBoxList } from '../components/cards/infoBox'
 import Button from '../components/button'
+import { useRouter } from 'next/router'
 
 export default function Disciplines() {
+  const router = useRouter()
   const { t } = useTranslate()
+  const [disciplines, setDisciplines] = useState(allDisciplines)
+  const [, setQuery] = useState(router.query.filter || '')
+
+  useEffect(() => {
+    if (router.query.filter?.length >= 3) {
+      filterDisciplines(router.query.filter)
+    }
+  }, [router.query])
+
+  const filterDisciplines = (value) => {
+    router.push(`/disciplines?filter=${value}`, null, { shallow: true })
+    if (value.length >= 3) {
+      const filteredDisciplines = allDisciplines.filter((discipline) => {
+        return t(discipline.title).toLowerCase().includes(value.toLowerCase())
+      })
+      setDisciplines(filteredDisciplines)
+    }
+
+    if (value.length === 0) {
+      setDisciplines(allDisciplines)
+    }
+  }
+
+  const handleChange = (e) => {
+    const { value } = e.target
+    setQuery(value)
+    filterDisciplines(value)
+  }
+
   return (
     <Layout>
       <Container>
@@ -19,9 +50,9 @@ export default function Disciplines() {
           </div>
         </div>
         <div className='w-full lg:grid grid-flow-dense grid-cols-4 gap-4 hidden'>
-          {allDisciplines.slice(0, 4).map((discipline) => (
+          {allDisciplines.slice(0, 4).map((discipline, i) => (
             <DisciplineCard
-              key={discipline.name}
+              key={`${discipline.name}-${i}`}
               title={t(discipline.title)}
               link={discipline.link}
               image={discipline.defaultIcon}
@@ -30,16 +61,10 @@ export default function Disciplines() {
         </div>
         <div className='w-full flex flex-col items-start justify-between gap-4'>
           <form className='w-full'>
-            <label
-              for='default-search'
-              class='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'
-            >
-              Search
-            </label>
-            <div class='relative'>
-              <div class='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+            <div className='relative'>
+              <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
                 <svg
-                  class='w-4 h-4 text-gray-500 dark:text-gray-400'
+                  className='w-4 h-4 text-gray-400'
                   aria-hidden='true'
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
@@ -47,9 +72,9 @@ export default function Disciplines() {
                 >
                   <path
                     stroke='currentColor'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
                     d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
                   />
                 </svg>
@@ -57,27 +82,36 @@ export default function Disciplines() {
               <input
                 type='search'
                 id='default-search'
-                class='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                placeholder='Search Mockups, Logos...'
+                className='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-400 rounded-xl bg-gray-50 focus:ring-primary-700 focus:border-primary-700 '
+                placeholder='Search ...'
+                onChange={handleChange}
                 required
               />
-              <button
-                type='submit'
-                class='text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-              >
-                Search
-              </button>
             </div>
           </form>
-          <div className='lg:max-w-xl w-full grid grid-flow-dense grid-cols-1 gap-4'>
-            {allDisciplines.map((discipline) => (
-              <DisciplineCard
-                key={discipline.name}
-                title={t(discipline.title)}
-                link={discipline.link}
-                image={discipline.defaultIcon}
-              />
-            ))}
+          <div className='flex gap-10 flex-col-reverse md:flex-row justify-between'>
+            <div className='w-full lg:w-2/3 h-min grid grid-flow-dense grid-cols-1 gap-4'>
+              {disciplines.map((discipline, i) => (
+                <DisciplineListCard
+                  key={`${discipline.name}-${i}`}
+                  title={t(discipline.title)}
+                  link={discipline.link}
+                  image={discipline.defaultIcon}
+                />
+              ))}
+            </div>
+            <div className='w-full lg:w-1/3'>
+              <InfoBoxList
+                title={t('appointment.title')}
+                description={t('appointment.description')}
+              >
+                <Button
+                  message={t('appointment.button')}
+                  link={'/appointment'}
+                  className={'w-full'}
+                />
+              </InfoBoxList>
+            </div>
           </div>
         </div>
       </Container>

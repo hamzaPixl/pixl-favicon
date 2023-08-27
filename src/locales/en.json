@@ -144,6 +144,20 @@
   "disciplines.discipline13.shortDescription": "Expert hematology services for blood-related conditions.",
   "disciplines.discipline13.description": "Expert hematology services for blood-related conditions.",
 
+  "interests.title": "Interests",
+  "interests.interest1.title": "Stress post-traumatiques",
+  "interests.interest2.title": "Douleurs chroniques et maladies psychosomatiques",
+  "interests.interest3.title": "Les problématiques sexuelles : dyspareunies, vaginismes, troubles érectiles, … ",
+  "interests.interest4.title": "Troubles anxieux",
+  "interests.interest5.title": "Troubles de l’humeur",
+  "interests.interest6.title": "Troubles du comportement alimentaire",
+
+  "specialists.lauravanderhodeden.description": "Laura van der Hoeden est psychologue clinicienne, sexologue et pratique l’hypnose PTR. Elle s’est également formée à la thérapie d’acceptation et d’engagement (ACT) à l’ULB. Elle a de l’expérience dans le cadre des douleurs chroniques et dans l’accompagnement des problèmes liés à la sphère périnéale.",
+  "specialists.lauravanderhodeden.patient": "Adolescents à partir de 16ans, adultes et personnes âgées.",
+
+  "languages.language1": "French",
+  "languages.language2": "English",
+
   "articles.filter.topic.1": "All",
   "articles.filter.topic.2": "News",
   "articles.filter.topic.3": "Events",
