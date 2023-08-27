@@ -60,11 +60,10 @@ Rachid Asli - rachid@clevertech.be
 
 # Pages
 
-[] contact
-[] specialists
-[] specialists [slug]
-[] disciplines
-[] disciplines [slug]
+- [] specialists
+- [] specialists [slug]
+- [] disciplines
+- [] disciplines [slug]
 
 ## TimeSheet
 
@@ -92,9 +91,10 @@ Rachid Asli - rachid@clevertech.be
 - [x] about
 - [x] news [slug]
 
-### 25/08 - 2h
+### 25/08 - 3h
 
 - [x] contact
+- [x] faq
 - [x] bg fixes
 
 # Improvement

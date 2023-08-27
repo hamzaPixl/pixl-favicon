@@ -6,6 +6,7 @@ import { useTranslate } from '../hooks/useTranslate'
 import Container from '../components/container'
 import Image from 'next/image'
 import Link from 'next/link'
+import Faq from '../components/faq'
 
 export default function Contact() {
   const { t } = useTranslate()
@@ -65,9 +66,9 @@ export default function Contact() {
             <div className='flex flex-col gap-4'>
               <div className='text-3xl xl:text-4xl font-bold'>Our centers</div>
             </div>
-            <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-4 w-full'>
+            <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-2 gap-4 w-full'>
               <div className='flex flex-col md:flex-row items-center'>
-                <div className='h-[200px] md:h-full w-full md:w-[200px] relative'>
+                <div className='h-[200px] md:h-full w-full md:w-[120px] relative'>
                   <Image
                     loading='lazy'
                     fill
@@ -75,7 +76,7 @@ export default function Contact() {
                     src={'/images/map.png'}
                   />
                 </div>
-                <div className='flex flex-col items-start gap-2 bg-white text-black p-5'>
+                <div className='flex flex-col items-start gap-2 bg-white text-black p-5 w-full'>
                   <div className='text-primary-700 text-xl font-bold'>Medistia auderghem</div>
                   <div className='flex flex-row gap-2 text-sm items-center'>
                     <Image
@@ -102,7 +103,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className='flex flex-col md:flex-row items-center'>
-                <div className='h-[200px] md:h-full w-full md:w-[200px] relative'>
+                <div className='h-[200px] md:h-full w-full md:w-[120px] relative'>
                   <Image
                     loading='lazy'
                     fill
@@ -110,7 +111,7 @@ export default function Contact() {
                     src={'/images/map.png'}
                   />
                 </div>
-                <div className='flex flex-col items-start gap-2 bg-white text-black p-5'>
+                <div className='flex flex-col items-start gap-2 bg-white text-black p-5 w-full'>
                   <div className='text-primary-700 text-xl font-bold'>Medistia auderghem</div>
                   <div className='flex flex-row gap-2 text-sm items-center'>
                     <Image
@@ -137,7 +138,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className='flex flex-col md:flex-row items-center'>
-                <div className='h-[200px] md:h-full w-full md:w-[200px] relative'>
+                <div className='h-[200px] md:h-full w-full md:w-[120px] relative'>
                   <Image
                     loading='lazy'
                     fill
@@ -145,7 +146,7 @@ export default function Contact() {
                     src={'/images/map.png'}
                   />
                 </div>
-                <div className='flex flex-col items-start gap-2 bg-white text-black p-5'>
+                <div className='flex flex-col items-start gap-2 bg-white text-black p-5 w-full'>
                   <div className='text-primary-700 text-xl font-bold'>Medistia auderghem</div>
                   <div className='flex flex-row gap-2 text-sm items-center'>
                     <Image
@@ -178,6 +179,7 @@ export default function Contact() {
             formSuccess={formSuccess}
             formError={formError}
           />
+          <Faq />
           <Newsletter />
         </Container>
       </div>

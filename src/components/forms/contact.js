@@ -61,6 +61,33 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
                 />
               </div>
             </div>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4 w-full'>
+              <div className='flex flex-col gap-2 justify-start w-full'>
+                <input type='hidden' name='form-center' value='contact' />
+                <label className='font-bold'>{t('contact.form.center')}</label>
+                <select
+                  name='center'
+                  className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
+                >
+                  <option value='none'></option>
+                  <option value='Auderghem'>Auderghem</option>
+                  <option value='Location 2'>Location 2</option>
+                  <option value='Location 3'>Location 3</option>
+                </select>
+              </div>
+              <div className='flex flex-col gap-2 justify-start w-full'>
+                <input type='hidden' name='form-question' value='contact' />
+                <label className='font-bold'>{t('contact.form.question')}</label>
+                <select
+                  name='question'
+                  className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
+                >
+                  <option value='none'></option>
+                  <option value='Medical question'>Medical question</option>
+                  <option value='Appointment'>Appointment</option>
+                </select>
+              </div>
+            </div>
             <div className='flex flex-col gap-2 justify-start w-full'>
               <label className='font-bold'>{t('contact.form.message')}</label>
               <textarea
