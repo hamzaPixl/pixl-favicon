@@ -2,8 +2,15 @@ import React from 'react'
 
 export default function Faq() {
   return (
-    <div className='w-full'>
-      <details className='mb-2 rounded-xl border border-slate-200 bg-none p-5 duration-300 open:bg-white shadow-lg open:text-primary-700 group'>
+    <div className='text-black w-full flex flex-col gap-10 justify-between items-start'>
+      <div className='flex flex-col gap-4'>
+        <div className='text-3xl xl:text-4xl font-bold'>Frequently asked questions</div>
+        <div className='max-w-xl text-base'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec nisl mi. Donec vel
+          viverra nulla, non lacinia est. Fusce posuere maximus elit non porta.
+        </div>
+      </div>
+      <details className='w-full mb-2 rounded-xl border border-slate-200 bg-none p-5 duration-300 open:bg-white shadow-lg open:text-primary-700 group'>
         <summary className='flex flex-row w-full justify-between items-center cursor-pointer list-none text-base font-bold'>
           Do I have to allow the use of cookies?
           <div className='block cursor-pointer group-open:hidden'>
@@ -26,7 +33,7 @@ export default function Faq() {
           See also: What is a cookie and what does it do?
         </p>
       </details>
-      <details className='mb-2 rounded-xl border border-slate-200 bg-none p-5 duration-300 open:bg-white shadow-lg open:text-primary-700 group'>
+      <details className='w-full mb-2 rounded-xl border border-slate-200 bg-none p-5 duration-300 open:bg-white shadow-lg open:text-primary-700 group'>
         <summary className='flex flex-row w-full justify-between items-center cursor-pointer list-none text-base font-bold'>
           Do I have to allow the use of cookies?
           <div className='block cursor-pointer group-open:hidden'>
@@ -49,7 +56,7 @@ export default function Faq() {
           See also: What is a cookie and what does it do?
         </p>
       </details>
-      <details className='mb-2 rounded-xl border border-slate-200 bg-none p-5 duration-300 open:bg-white shadow-lg open:text-primary-700 group'>
+      <details className='w-full mb-2 rounded-xl border border-slate-200 bg-none p-5 duration-300 open:bg-white shadow-lg open:text-primary-700 group'>
         <summary className='flex flex-row w-full justify-between items-center cursor-pointer list-none text-base font-bold'>
           Do I have to allow the use of cookies?
           <div className='block cursor-pointer group-open:hidden'>
