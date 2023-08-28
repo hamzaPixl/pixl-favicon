@@ -3,7 +3,7 @@ export const allSpecialists = [
     title: 'Dr. Laura van der Hoeden',
     firstName: 'Laura',
     lastName: 'van der Hoeden',
-    link: 'specialists/lauravanderhodeden',
+    link: '/specialists/lauravanderhodeden',
     disciplines: ['disciplines.discipline1.title', 'disciplines.discipline2.title'],
     mainDiscipline: 'disciplines.discipline1.title',
     avatar: '/images/specialists/lauravanderhodeden.png',
@@ -12,6 +12,7 @@ export const allSpecialists = [
       email: 'example@gmail..com',
       web: 'www.example.com',
     },
+    patients: ['patients.patient1'],
     interests: [
       'interests.interest1',
       'interests.interest2',

@@ -84,6 +84,20 @@
 
   "header.appointment": "Make an appointment",
 
+  "contact": "Contact",
+
+  "disciplines.title": "Disciplines",
+  "languages.title": "Langues",
+  "patients.title": "Patients",
+  "patients.patient1": "Adolescents à partir de 16ans, adultes et personnes âgées.",
+
+  "interests.interest1": "Stress post-traumatiques",
+  "interests.interest2": "Douleurs chroniques et maladies psychosomatiques",
+  "interests.interest3": "Les problématiques sexuelles : dyspareunies, vaginismes, troubles érectiles, … ",
+  "interests.interest4": "Troubles anxieux",
+  "interests.interest5": "Troubles de l’humeur",
+  "interests.interest6": "Troubles du comportement alimentaire",
+
   "appointment.title": "Medistia recrute!",
   "appointment.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec nisl mi. Donec vel viverra nulla, non lacinia est. Fusce posuere maximus elit non porta.",
   "appointment.button": "Make an appointment",
