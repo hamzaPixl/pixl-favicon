@@ -76,8 +76,8 @@ export default function Home() {
           {allDisciplines.slice(0, 8).map((discipline) => (
             <DisciplineCard
               key={discipline.name}
-              title={t(discipline.title)}
               link={discipline.link}
+              title={t(discipline.title)}
               image={discipline.defaultIcon}
             />
           ))}
