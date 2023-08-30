@@ -16,9 +16,9 @@ export default function Home() {
   const { t } = useTranslate()
   return (
     <Layout>
-      <div className='bg-black/70 w-full bg-[image:url(/images/hero.png)] bg-cover bg-center bg-no-repeat relative lg:h-[485px] items-center flex'>
-        <div className='text-white w-full flex flex-col lg:flex-row gap-4 md:items-center lg:items-end justify-between p-6 max-w-screen-xl mx-auto'>
-          <div className='flex flex-col gap-4'>
+      <div className='w-full bg-[image:url(/images/hero.png)] bg-cover bg-center bg-no-repeat relative lg:h-[485px] items-center flex'>
+        <div className='text-white h-full w-full flex flex-col lg:flex-row gap-4 items-center justify-between p-6 bg-black/70'>
+          <div className='max-w-screen-xl mx-auto flex flex-col gap-4'>
             <div className='text-3xl xl:text-4xl font-bold'>About us</div>
             <div className='text-base max-w-xl'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam in
@@ -31,7 +31,7 @@ export default function Home() {
               <Button message={t('home.about.button.secondary')} link='/centers' />
             </div>
           </div>
-          <div className='flex flex-col justify-between md:items-center lg:items-start md:flex-row lg:flex-col gap-2 bg-primary-700 rounded-xl text-white font-bold p-6 md:w-full lg:w-auto'>
+          <div className='max-w-screen-xl mx-auto flex flex-col justify-between md:items-center lg:items-start md:flex-row lg:flex-col gap-2 bg-primary-700 rounded-xl text-white font-bold p-6 w-full lg:w-auto'>
             <div className='text-xl xl:text-2xl'>Contact us</div>
             <div className='text-base flex flex-col md:flex-row lg:flex-col gap-2 md:gap-4 lg:gap-2'>
               <div className='flex flex-row gap-2'>

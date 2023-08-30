@@ -93,6 +93,7 @@ Rachid Asli - rachid@clevertech.be
 - [x] specialists
 - [x] specialists [slug]
 - [x] disciplines [slug]
+- [x] overlay
 - [] timetable
 
 # Improvement
