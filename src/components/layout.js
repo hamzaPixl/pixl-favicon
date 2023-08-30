@@ -3,6 +3,7 @@ import SEO from './seo'
 import Footer from './footer'
 import Header from './header'
 import CookieBanner from './banners/cookie'
+import MenuOverlay from './menu/overlay'
 
 export default function Layout({ children }) {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -11,7 +12,11 @@ export default function Layout({ children }) {
       <main>
         <SEO />
         <Header navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-        {children}
+        {navbarOpen ? (
+          <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
+        ) : (
+          children
+        )}
         <Footer />
         <CookieBanner />
       </main>
