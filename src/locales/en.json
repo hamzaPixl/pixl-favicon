@@ -20,6 +20,17 @@
   "about.button.primary": "More about us",
   "about.button.secondary": "Our medical centers",
 
+  "faq.title": "Frequently asked questions",
+  "faq.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+  "faq.question1": "fds ipsum dolor sit amet, consectetur adipiscing elit?",
+  "faq.answer1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+  "faq.question2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+  "faq.answer2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+  "faq.question3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+  "faq.answer3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+  "faq.question4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+  "faq.answer4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+
   "link.home": "Home",
   "link.mission": "Mission",
   "link.projects": "Projects",
@@ -53,6 +64,10 @@
 
   "about.members.title": "Our team",
   "about.members.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat.",
+
+  "home.disciplines.title": "Our disciplines",
+  "home.disciplines.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat.",
+  "home.disciplines.button": "More about our disciplines",
 
   "home.news.title": "Latest news",
   "home.news.button": "More news",
@@ -98,7 +113,6 @@
   "contact": "Contact",
   "centers": "Our centers",
 
-  "disciplines.title": "Disciplines",
   "languages.title": "Langues",
   "patients.title": "Patients",
   "patients.patient1": "Adolescents à partir de 16ans, adultes et personnes âgées.",
@@ -129,6 +143,14 @@
   "newsletter.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
   "newsletter.button": "Stay in the loop",
   "newsletter.email.placeholder": "Your email",
+
+  "disciplines.title": "Nos Disciplines",
+  "disciplines.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+
+  "specialists.title": "Nos specialists",
+  "specialists.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sedipsum ac, tincidunt mollis erat.",
+
+  "form.search.placeholder": "Search ...",
 
   "disciplines.discipline1.title": "Cardiology",
   "disciplines.discipline1.shortDescription": "Comprehensive cardiology services for heart health.",
