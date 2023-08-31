@@ -20,13 +20,8 @@ export default function Home() {
       <div className='w-full bg-[image:url(/images/hero.png)] bg-cover bg-center bg-no-repeat relative lg:h-[485px] items-center flex'>
         <div className='text-white h-full w-full flex flex-col lg:flex-row gap-4 items-center justify-between p-6 bg-black/70'>
           <div className='max-w-screen-xl mx-auto flex flex-col gap-4'>
-            <div className='text-3xl xl:text-4xl font-bold'>About us</div>
-            <div className='text-base max-w-xl'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam in
-              consectetur aliquam, lacus velit luctus massa, vitae ullamcorper nisl nunc quis
-              sapien. Sed euismod, diam in consectetur aliquam, lacus velit luctus massa, vitae
-              ullamcorper nisl nunc quis sapien.
-            </div>
+            <div className='text-3xl xl:text-4xl font-bold'>{t('home.about.title')}</div>
+            <div className='text-base max-w-xl'>{t('home.about.description')}</div>
             <div className='flex flex-col w-full md:w-auto md:flex-row gap-4 justify-between md:justify-start'>
               <InvertedButton message={t('home.about.button.primary')} link='/about' />
               <Button message={t('home.about.button.secondary')} link='/centers' />
