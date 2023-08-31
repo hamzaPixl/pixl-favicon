@@ -98,6 +98,6 @@ Rachid Asli - rachid@clevertech.be
 
 # Improvement
 
-- [] correct intl
+- [x] correct intl
+- [x] move component to separeted file
 - [] move medistia info to api calls
-- [] move component to separeted file

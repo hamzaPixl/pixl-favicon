@@ -8,9 +8,10 @@ import Newsletter from '../components/cards/newsletter'
 import { allDisciplines } from '../api/disciplines'
 import ArticleCard from '../components/cards/article'
 import { allArticles } from '../api/articles'
-import Image from 'next/image'
 import Container from '../components/container'
 import ContactCard from '../components/cards/contact'
+import InfoSection from '../components/infoSection'
+import UspCard from '../components/cards/usp'
 
 export default function Home() {
   const { t } = useTranslate()
@@ -68,18 +69,13 @@ export default function Home() {
         </InfoBox>
 
         <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-4 w-full'>
-          <div className='flex flex-col items-start gap-4'>
-            <div className='text-2xl font-bold'>{t('home.usp.1.title')}</div>
-            <div className='text-base'>{t('home.usp.1.description')} </div>
-          </div>
-          <div className='flex flex-col items-start gap-4'>
-            <div className='text-2xl font-bold'>{t('home.usp.2.title')}</div>
-            <div className='text-base'>{t('home.usp.2.description')} </div>
-          </div>
-          <div className='flex flex-col items-start gap-4'>
-            <div className='text-2xl font-bold'>{t('home.usp.3.title')}</div>
-            <div className='text-base'>{t('home.usp.3.description')} </div>
-          </div>
+          {Array.from({ length: 3 }).map((_, index) => (
+            <UspCard
+              key={`usp-${index}`}
+              title={t(`home.usp.${index + 1}.title`)}
+              description={t(`home.usp.${index + 1}.description`)}
+            />
+          ))}
         </div>
       </Container>
 
@@ -108,30 +104,14 @@ export default function Home() {
       </div>
 
       <Container>
-        <div className='text-black w-full flex flex-col lg:flex-row gap-10 justify-between items-center'>
-          <div className='flex flex-col gap-4'>
-            <div className='text-3xl xl:text-4xl font-bold'>About us</div>
-            <div className='text-base'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam in
-              consectetur aliquam, lacus velit luctus massa, vitae ullamcorper nisl nunc quis
-              sapien. Sed euismod, diam in consectetur aliquam, lacus velit luctus massa, vitae
-              ullamcorper nisl nunc quis sapien.
-            </div>
-            <div className='flex flex-col w-full md:w-auto md:flex-row gap-4 justify-between md:justify-start'>
-              <InvertedButton message={t('home.about.button.primary')} link='/about' />
-              <ButtonSecondary message={t('home.about.button.secondary')} link='/centers' />
-            </div>
-          </div>
-          <div className='rounded-xl h-[240px] md:h-[420px] lg:h-[340px] w-full relative'>
-            <Image
-              loading='lazy'
-              className='rounded-xl'
-              fill
-              alt='Article illustration'
-              src={'/images/about.png'}
-            />
-          </div>
-        </div>
+        <InfoSection
+          title={t('home.about.title')}
+          description={t('home.about.description')}
+          image={'/images/about.png'}
+        >
+          <InvertedButton message={t('home.about.button.primary')} link='/about' />
+          <ButtonSecondary message={t('home.about.button.secondary')} link='/contact' />
+        </InfoSection>
         <Newsletter />
       </Container>
     </Layout>

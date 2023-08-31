@@ -17,6 +17,9 @@
   "home.about.button.primary": "More about us",
   "home.about.button.secondary": "Our medical centers",
 
+  "about.button.primary": "More about us",
+  "about.button.secondary": "Our medical centers",
+
   "link.home": "Home",
   "link.mission": "Mission",
   "link.projects": "Projects",
@@ -47,6 +50,9 @@
   "contact.form.questions.question1": "Medical question",
   "contact.form.questions.question2": "Administrative question",
   "contact.form.questions.question3": "Other",
+
+  "about.members.title": "Our team",
+  "about.members.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat.",
 
   "home.news.title": "Latest news",
   "home.news.button": "More news",
