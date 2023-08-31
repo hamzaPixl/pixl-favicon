@@ -42,6 +42,11 @@
   "contact.form.phone.placeholder": "Your phone",
   "contact.form.message": "Message",
   "contact.form.message.placeholder": "Your message",
+  "contact.form.center": "Which center ?",
+  "contact.form.question": "A specifiq question ?",
+  "contact.form.questions.question1": "Medical question",
+  "contact.form.questions.question2": "Administrative question",
+  "contact.form.questions.question3": "Other",
 
   "home.news.title": "Latest news",
   "home.news.button": "More news",
@@ -85,6 +90,7 @@
   "header.appointment": "Make an appointment",
 
   "contact": "Contact",
+  "centers": "Our centers",
 
   "disciplines.title": "Disciplines",
   "languages.title": "Langues",

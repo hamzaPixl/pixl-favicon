@@ -1,6 +1,7 @@
 import React from 'react'
 import { InvertedButton } from '../button'
 import { useTranslate } from '../../hooks/useTranslate'
+import { centers } from '../../api/centers'
 
 export default function ContactForm({ formSuccess, handleSubmit, formError }) {
   const { t } = useTranslate()
@@ -70,9 +71,11 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
                   className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
                 >
                   <option value='none'></option>
-                  <option value='Auderghem'>Auderghem</option>
-                  <option value='Location 2'>Location 2</option>
-                  <option value='Location 3'>Location 3</option>
+                  {centers.map((center, index) => (
+                    <option key={`center-${index}`} value={center.title}>
+                      {center.title}
+                    </option>
+                  ))}
                 </select>
               </div>
               <div className='flex flex-col gap-2 justify-start w-full'>
@@ -83,8 +86,11 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
                   className='border-2 focus:border-black focus:ring-black border-black ring-white rounded-xl'
                 >
                   <option value='none'></option>
-                  <option value='Medical question'>Medical question</option>
-                  <option value='Appointment'>Appointment</option>
+                  {Array.from({ length: 3 }).map((_, index) => (
+                    <option key={`question-${index}`} value={`question-${index}`}>
+                      {t(`contact.form.questions.question${index + 1}`)}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>

@@ -10,7 +10,7 @@ import ArticleCard from '../components/cards/article'
 import { allArticles } from '../api/articles'
 import Image from 'next/image'
 import Container from '../components/container'
-import Link from 'next/link'
+import ContactCard from '../components/cards/contact'
 
 export default function Home() {
   const { t } = useTranslate()
@@ -31,31 +31,11 @@ export default function Home() {
               <Button message={t('home.about.button.secondary')} link='/centers' />
             </div>
           </div>
-          <div className='max-w-screen-xl mx-auto flex flex-col justify-between md:items-center lg:items-start md:flex-row lg:flex-col gap-2 bg-primary-700 rounded-xl text-white font-bold p-6 w-full lg:w-auto'>
-            <div className='text-xl xl:text-2xl'>Contact us</div>
-            <div className='text-base flex flex-col md:flex-row lg:flex-col gap-2 md:gap-4 lg:gap-2'>
-              <div className='flex flex-row gap-2'>
-                <Image
-                  loading='lazy'
-                  width={20}
-                  height={20}
-                  alt='Contact phone illustration'
-                  src={'/icons/phone.svg'}
-                />
-                <Link href='tel:+31 20 123 4567'>+31 20 123 4567</Link>
-              </div>
-              <div className='flex flex-row gap-2'>
-                <Image
-                  loading='lazy'
-                  width={20}
-                  height={20}
-                  alt='Contact mail illustration'
-                  src={'/icons/mail.svg'}
-                />
-                <Link href='mailto:example@gmail.com'>example@gmail.com</Link>
-              </div>
-            </div>
-          </div>
+          <ContactCard
+            className={
+              'max-w-screen-xl mx-auto flex flex-col justify-between md:items-center lg:items-start md:flex-row lg:flex-col gap-2 bg-primary-700 rounded-xl text-white font-bold p-6 w-full lg:w-auto'
+            }
+          />
         </div>
       </div>
 
