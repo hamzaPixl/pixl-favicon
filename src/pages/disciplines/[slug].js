@@ -74,7 +74,7 @@ export default function DisciplineDetail() {
                 />
               </div>
             </div>
-            <div className='text-black w-full md:flex md:flex-col gap-10 justify-between items-start  hidden'>
+            <div className='flex flex-col gap-4 w-full items-start'>
               <div className='text-3xl xl:text-4xl font-bold'>
                 {t('disciplnes.scpecialists.title')}
               </div>
@@ -92,6 +92,73 @@ export default function DisciplineDetail() {
                   </Link>
                 ))}
               </div>
+            </div>
+            <div className='text-black w-full flex flex-col gap-10 justify-between items-start md:hidden'>
+              {specialists.map((specialist, index) => (
+                <div
+                  key={`loc-${index}-${specialist.title}`}
+                  className='flex flex-col gap-2 items-left pb-10'
+                >
+                  <SpecialistListCardDisciplineDetail
+                    title={specialist.title}
+                    link={specialist.link}
+                    image={specialist.avatar}
+                    mainDiscipline={t(`disciplines.${specialist.mainDiscipline}.title`)}
+                  />
+                  <div className='grid grid-flow-dense grid-cols-5 gap-2 w-full'>
+                    {week.map((d, index) => (
+                      <div
+                        key={`day-${index}`}
+                        className='bg-gray-100 text-black uppercase text-center text-sm py-2 font-bold'
+                      >
+                        {t(`week.${d}`)}
+                      </div>
+                    ))}
+                  </div>
+                  <div className='grid grid-flow-dense grid-cols-5 gap-2 w-full'>
+                    {specialist.timetable.map((day, index) => (
+                      <div key={`day-${index}`} className='w-full flex flex-row gap-2'>
+                        <div
+                          className={
+                            day.locations.find((f) => f.location === location)?.am
+                              ? 'bg-primary-700/20 mx-auto justify-center flex w-1/2'
+                              : 'bg-gray-100 mx-auto flex w-1/2'
+                          }
+                        >
+                          {day.locations.find((f) => f.location === location)?.am && (
+                            <Image
+                              loading='lazy'
+                              width={24}
+                              height={24}
+                              src={`/icons/green-flag.svg`}
+                              alt={`green-flag`}
+                            />
+                          )}
+                        </div>
+                        <div
+                          className={
+                            day.locations.find((f) => f.location === location)?.pm
+                              ? 'bg-primary-700/20 py-2 mx-auto justify-center flex w-1/2'
+                              : 'bg-gray-100 mx-auto items-center flex w-1/2'
+                          }
+                        >
+                          {day.locations.find((f) => f.location === location)?.pm && (
+                            <Image
+                              loading='lazy'
+                              width={24}
+                              height={24}
+                              src={`/icons/green-flag.svg`}
+                              alt={`green-flag`}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className='text-black w-full md:flex md:flex-col gap-10 justify-between items-start hidden'>
               <div className='grid grid-flow-dense grid-cols-7 gap-4 w-full'>
                 <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10 col-span-2'>
                   {t('specialists.title')}

@@ -158,6 +158,84 @@ export default function SpecialistDetail() {
               </div>
             </div>
 
+            <div className='text-black w-full md:hidden block'>
+              <div className='flex flex-col gap-2 items-center justify-between'>
+                <div className='flex flex-col md:flex-row gap-1 justify-between items-start md:items-center w-full pb-10'>
+                  <div className='text-2xl sm:text-3xl font-bold leading-tight'>
+                    {t('specialist.timetable.title')}
+                  </div>
+                </div>
+                {specialist.locations.map((location, index) => (
+                  <div
+                    className='flex flex-col gap-2 items-start pb-10'
+                    key={`loc-location.id-spe-${index}`}
+                  >
+                    <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10'>
+                      {centers.find((c) => c.id === location)?.title}
+                    </div>
+                    <div className='grid grid-flow-dense grid-cols-5 gap-2 w-full'>
+                      {week.map((d, index) => (
+                        <div
+                          key={`day-${index}`}
+                          className='bg-gray-100 text-black uppercase text-center text-sm py-2 font-bold'
+                        >
+                          {t(`week.${d}`)}
+                        </div>
+                      ))}
+                    </div>
+                    <div className='grid grid-flow-dense grid-cols-5 gap-2 w-full'>
+                      {specialist.timetable.map((day, index) => (
+                        <div key={`loc-${index}-${location.id}`} className='flex flex-row gap-1'>
+                          <div
+                            className={
+                              day.locations.find(
+                                (f) => f.location === centers.find((c) => c.id === location).id,
+                              )?.am
+                                ? 'bg-primary-700/20 mx-auto justify-center flex w-1/2'
+                                : 'bg-gray-100 mx-auto flex w-1/2'
+                            }
+                          >
+                            {day.locations.find(
+                              (f) => f.location === centers.find((c) => c.id === location).id,
+                            )?.am && (
+                              <Image
+                                loading='lazy'
+                                width={24}
+                                height={24}
+                                src={`/icons/green-flag.svg`}
+                                alt={`green-flag`}
+                              />
+                            )}
+                          </div>
+                          <div
+                            className={
+                              day.locations.find(
+                                (f) => f.location === centers.find((c) => c.id === location).id,
+                              )?.pm
+                                ? 'bg-primary-700/20 py-2 mx-auto justify-center flex w-1/2'
+                                : 'bg-gray-100 mx-auto items-center flex w-1/2'
+                            }
+                          >
+                            {day.locations.find(
+                              (f) => f.location === centers.find((c) => c.id === location).id,
+                            )?.pm && (
+                              <Image
+                                loading='lazy'
+                                width={24}
+                                height={24}
+                                src={`/icons/green-flag.svg`}
+                                alt={`green-flag`}
+                              />
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className='text-black w-full hidden md:block'>
               <div className='flex flex-col gap-4 items-center justify-between'>
                 <div className='flex flex-col md:flex-row gap-3 justify-between items-start md:items-center w-full pb-10'>
