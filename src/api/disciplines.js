@@ -1,6 +1,7 @@
 export const allDisciplines = [
   {
     name: 'Cardio',
+    id: 'discipline1',
     title: 'disciplines.discipline1.title',
     shortDescription: 'disciplines.discipline1.shortDescription',
     description: 'disciplines.discipline1.description',
@@ -10,6 +11,7 @@ export const allDisciplines = [
   },
   {
     name: 'Dentist',
+    id: 'discipline2',
     title: 'disciplines.discipline2.title',
     shortDescription: 'disciplines.discipline2.shortDescription',
     description: 'disciplines.discipline2.description',

@@ -59,7 +59,7 @@ export default function Specialists() {
                   title={specialist.title}
                   link={specialist.link}
                   image={specialist.avatar}
-                  mainDiscipline={t(specialist.mainDiscipline)}
+                  mainDiscipline={t(`disciplines.${specialist.mainDiscipline}.title`)}
                 />
               ))}
             </div>
@@ -68,11 +68,7 @@ export default function Specialists() {
                 title={t('appointment.title')}
                 description={t('appointment.description')}
               >
-                <Button
-                  message={t('appointment.button')}
-                  link={'/appointment'}
-                  className={'w-full'}
-                />
+                <Button message={t('appointment.button')} link={'/contact'} className={'w-full'} />
               </InfoBoxList>
             </div>
           </div>

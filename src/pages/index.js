@@ -24,7 +24,7 @@ export default function Home() {
             <div className='text-base max-w-xl'>{t('home.about.description')}</div>
             <div className='flex flex-col w-full md:w-auto md:flex-row gap-4 justify-between md:justify-start'>
               <InvertedButton message={t('home.about.button.primary')} link='/about' />
-              <Button message={t('home.about.button.secondary')} link='/centers' />
+              <Button message={t('home.about.button.secondary')} link='/contact' />
             </div>
           </div>
           <ContactCard

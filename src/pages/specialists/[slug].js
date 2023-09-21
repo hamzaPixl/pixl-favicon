@@ -8,6 +8,11 @@ import Button, { InvertedButton } from '../../components/button'
 import InfoBox from '../../components/cards/infoBox'
 import Image from 'next/image'
 import Link from 'next/link'
+import { centers } from '../../api/centers'
+import { allDisciplines } from '../../api/disciplines'
+import { DisciplineListSpecialistDetail } from '../../components/cards/discipline'
+
+const week = ['mon', 'tue', 'wed', 'thu', 'fri']
 
 export default function SpecialistDetail() {
   const router = useRouter()
@@ -16,6 +21,7 @@ export default function SpecialistDetail() {
 
   useEffect(() => {
     if (router.query.slug?.length > 0) {
+      console.log(allSpecialists.find((item) => item.link.includes(router.query.slug)))
       setSpecialist(allSpecialists.find((item) => item.link.includes(router.query.slug)))
     }
   }, [router.query])
@@ -74,16 +80,22 @@ export default function SpecialistDetail() {
                       alt='Contact web illustration'
                       src={'/icons/web.svg'}
                     />
-                    <Link href={`${specialist.contact.web}`}>{specialist.contact.web}</Link>
+                    <Link arget='_blank' href={`https://${specialist.contact.web}`}>
+                      {specialist.contact.web}
+                    </Link>
                   </div>
                 </div>
                 <div className='flex flex-col gap-1 justify-between items-start'>
-                  <div className='text-base font-bold'>{t('disciplines.title')}</div>
+                  <div className='text-base font-bold'>{t('specialist.discipline.title')}</div>
                   <div className='text-base'>
-                    <ul className=''>
+                    <ul>
                       {specialist.disciplines.map((d, index) => (
-                        <li key={`li-${index}`} className='py-2'>
-                          {t(d)}
+                        <li key={`di-${index}`} className='py-2'>
+                          <DisciplineListSpecialistDetail
+                            title={t(`disciplines.${d}.title`)}
+                            link={allDisciplines.find((f) => f.id === d).link}
+                            image={allDisciplines.find((f) => f.id === d).defaultIcon}
+                          />
                         </li>
                       ))}
                     </ul>
@@ -94,7 +106,7 @@ export default function SpecialistDetail() {
                 <div className='flex flex-col gap-1 justify-between items-start'>
                   <div className='text-3xl xl:text-4xl font-bold'>{specialist.title}</div>
                   <div className='text-base text-primary-700 font-bold'>
-                    {t(specialist.mainDiscipline)}
+                    {t(`disciplines.${specialist.mainDiscipline}.title`)}
                   </div>
                 </div>
                 <div className='flex flex-col gap-1 justify-between items-start'>
@@ -102,7 +114,7 @@ export default function SpecialistDetail() {
                     {t(specialist.description)
                       .split('\n\n')
                       .map((paragraph, index) => (
-                        <p key={`p-${index}`} className='py-2'>
+                        <p key={`desc-${index}`} className='py-2'>
                           {paragraph}
                         </p>
                       ))}
@@ -111,9 +123,9 @@ export default function SpecialistDetail() {
                 <div className='flex flex-col gap-1 justify-between items-start'>
                   <div className='text-xl font-bold text-primary-700'>{t('interests.title')}</div>
                   <div className='text-base'>
-                    <ul className=''>
+                    <ul className='list-disc'>
                       {specialist.interests.map((interest, index) => (
-                        <li key={`li-${index}`} className='py-2'>
+                        <li key={`in-${index}`} className='py-2'>
                           {t(interest)}
                         </li>
                       ))}
@@ -123,9 +135,9 @@ export default function SpecialistDetail() {
                 <div className='flex flex-col gap-1 justify-between items-start'>
                   <div className='text-xl font-bold text-primary-700'>{t('patients.title')}</div>
                   <div className='text-base'>
-                    <ul className=''>
+                    <ul className='list-disc'>
                       {specialist.patients.map((patient, index) => (
-                        <li key={`li-${index}`} className='py-2'>
+                        <li key={`pa-${index}`} className='py-2'>
                           {t(patient)}
                         </li>
                       ))}
@@ -135,9 +147,9 @@ export default function SpecialistDetail() {
                 <div className='flex flex-col gap-1 justify-between items-start'>
                   <div className='text-xl font-bold text-primary-700'>{t('languages.title')}</div>
                   <div className='text-base'>
-                    <ul className=''>
+                    <ul className='list-disc'>
                       {specialist.languages.map((lang, index) => (
-                        <li key={`li-${index}`} className='py-2'>
+                        <li key={`lng-${index}`} className='py-2'>
                           {t(lang)}
                         </li>
                       ))}
@@ -146,8 +158,79 @@ export default function SpecialistDetail() {
                 </div>
               </div>
             </div>
+
+            <div className='text-black w-full hidden md:block'>
+              <div className='flex flex-col gap-4 items-center justify-between'>
+                <div className='flex flex-col md:flex-row gap-3 justify-between items-start md:items-center w-full pb-10'>
+                  <div className='text-2xl sm:text-3xl font-bold leading-tight'>
+                    {t('specialist.timetable.title')}
+                  </div>
+                </div>
+                <div className='grid grid-flow-dense grid-cols-7 gap-4 w-full'>
+                  <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10 col-span-2'>
+                    {t('locations.title')}
+                  </div>
+                  {week.map((d, index) => (
+                    <div
+                      key={`day-${index}`}
+                      className='bg-gray-100 text-black uppercase text-center text-sm py-2 px-10 font-bold'
+                    >
+                      {t(`week.${d}`)}
+                    </div>
+                  ))}
+                </div>
+                {centers.map((location) => (
+                  <>
+                    <div className='grid grid-flow-dense grid-cols-7 gap-4 w-full'>
+                      <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10 col-span-2'>
+                        {location.title}
+                      </div>
+                      {specialist.timetable.map((day, index) => (
+                        <div key={`loc-${index}-${location.id}`} className='flex flex-row gap-1'>
+                          <div
+                            className={
+                              day.locations.find((f) => f.location === location.id).am
+                                ? 'bg-primary-700/20 mx-auto justify-center flex w-1/2'
+                                : 'bg-gray-100 py-2 px-10 flex w-1/2'
+                            }
+                          >
+                            {day.locations.find((f) => f.location === location.id).am && (
+                              <Image
+                                loading='lazy'
+                                width={24}
+                                height={24}
+                                src={`/icons/green-flag.svg`}
+                                alt={`green-flag`}
+                              />
+                            )}
+                          </div>
+                          <div
+                            className={
+                              day.locations.find((f) => f.location === location.id).pm
+                                ? 'bg-primary-700/20 py-2 mx-auto justify-center flex w-1/2'
+                                : 'bg-gray-100 py-2 px-10 items-center flex w-1/2'
+                            }
+                          >
+                            {day.locations.find((f) => f.location === location.id).pm && (
+                              <Image
+                                loading='lazy'
+                                width={24}
+                                height={24}
+                                src={`/icons/green-flag.svg`}
+                                alt={`green-flag`}
+                              />
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                ))}
+              </div>
+            </div>
           </>
         )}
+
         <InfoBox title={t('appointment.title')} description={t('appointment.description')}>
           <Button message={t('appointment.button')} link={'/'} />
         </InfoBox>

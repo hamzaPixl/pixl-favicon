@@ -18,7 +18,7 @@ export default function Footer() {
             <Image loading='lazy' fill src='/logo.svg' alt={`Logo`} />
           </Link>
           <div className='flex flex-row gap-4 xl:gap-6 items-center'>
-            <Button message={t('header.appointment')} link='/appointment' />
+            <Button message={t('header.appointment')} link='/contact' />
           </div>
         </div>
       </div>

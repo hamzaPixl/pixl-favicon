@@ -77,11 +77,7 @@ export default function Disciplines() {
                 title={t('appointment.title')}
                 description={t('appointment.description')}
               >
-                <Button
-                  message={t('appointment.button')}
-                  link={'/appointment'}
-                  className={'w-full'}
-                />
+                <Button message={t('appointment.button')} link={'/contact'} className={'w-full'} />
               </InfoBoxList>
             </div>
           </div>

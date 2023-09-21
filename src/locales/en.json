@@ -89,6 +89,19 @@
   "contact.card.action": "Make an appointement",
   "contact.card.map": "Show in Google Maps",
 
+  "locations.title": "Locations",
+  "locations.location": "Locations",
+  "week.mon": "Mon",
+  "week.tue": "Tue",
+  "week.wed": "Wed",
+  "week.thu": "Thu",
+  "week.fri": "Fri",
+  "week.sat": "Sat",
+  "week.sun": "Sun",
+
+  "specialist.timetable.title": "Timetable",
+  "specialist.discipline.title": "Disciplines",
+
   "about.title": "About us",
   "about.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque libero, venenatis sed ipsum ac, tincidunt mollis erat. Maecenas vulputate est eu finibus vestibulum. Nunc ex quam, vehicula eget varius placerat, dignissim vitae ligula.",
   "about.hero.primaryAction": "Get in touch",

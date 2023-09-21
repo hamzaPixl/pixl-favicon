@@ -69,3 +69,25 @@ export function DisciplineListCard({ title, link, image }) {
     </div>
   )
 }
+
+export function DisciplineListSpecialistDetail({ title, link, image }) {
+  return (
+    <div className='group text-black cursor-pointer'>
+      <Link href={link}>
+        <div className='bg-white flex flex-row gap-2 items-center justify-between group-hover:transition-all group-hover:scale-105 group-hover:duration-300 duration-300  shadow-lg rounded-xl pl-4 pr-20 py-5'>
+          <div className='flex flex-row gap-2 items-center'>
+            <Image
+              loading='lazy'
+              width={32}
+              height={32}
+              sizes='100vw'
+              alt='Discipline illustration'
+              src={image}
+            />
+            <div className='text-black font-bold text-base'>{title}</div>
+          </div>
+        </div>
+      </Link>
+    </div>
+  )
+}

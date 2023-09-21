@@ -34,7 +34,7 @@ export default function Header({ setNavbarOpen, navbarOpen }) {
               </Link>
             ))}
             <div className='hidden xl:block'>
-              <Button message={t('header.appointment')} link='/appointment' />
+              <Button message={t('header.appointment')} link='/contact' />
             </div>
           </div>
           <div className='block lg:hidden'>
