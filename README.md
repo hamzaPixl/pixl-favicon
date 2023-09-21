@@ -84,7 +84,7 @@ Rachid Asli - rachid@clevertech.be
 - [x] about
 - [x] news [slug]
 
-### 25/08 - 6h
+### 25/08 - 10h
 
 - [x] contact
 - [x] faq
@@ -94,10 +94,9 @@ Rachid Asli - rachid@clevertech.be
 - [x] specialists [slug]
 - [x] disciplines [slug]
 - [x] overlay
-- [] timetable
+- [x] timetable
 
 # Improvement
 
 - [x] correct intl
 - [x] move component to separeted file
-- [] move medistia info to api calls
