@@ -1,6 +1,8 @@
 {
   "title": "Welcome to Nextjs boilerplate from Clevertech",
 
+  "disciplnes.scpecialists.title": "Our specialists",
+
   "home.meta.title": "Welcome to Nextjs boilerplate from Clevertech",
   "home.meta.description": "Welcome to Nextjs boilerplate from Clevertech",
   "about.meta.title": "More about us",
@@ -215,6 +217,10 @@
 
   "specialists.lauravanderhodeden.description": "Laura van der Hoeden est psychologue clinicienne, sexologue et pratique l’hypnose PTR. Elle s’est également formée à la thérapie d’acceptation et d’engagement (ACT) à l’ULB. Elle a de l’expérience dans le cadre des douleurs chroniques et dans l’accompagnement des problèmes liés à la sphère périnéale.",
   "specialists.lauravanderhodeden.patient": "Adolescents à partir de 16ans, adultes et personnes âgées.",
+  "specialists.lauravanderhodeden2.description": "Laura van der Hoeden est psychologue clinicienne, sexologue et pratique l’hypnose PTR. Elle s’est également formée à la thérapie d’acceptation et d’engagement (ACT) à l’ULB. Elle a de l’expérience dans le cadre des douleurs chroniques et dans l’accompagnement des problèmes liés à la sphère périnéale.",
+  "specialists.lauravanderhodeden2.patient": "Adolescents à partir de 16ans, adultes et personnes âgées.",
+  "specialists.jhondoe.description": "Laura van der Hoeden est psychologue clinicienne, sexologue et pratique l’hypnose PTR. Elle s’est également formée à la thérapie d’acceptation et d’engagement (ACT) à l’ULB. Elle a de l’expérience dans le cadre des douleurs chroniques et dans l’accompagnement des problèmes liés à la sphère périnéale.",
+  "specialists.jhondoe.patient": "Adolescents à partir de 16ans, adultes et personnes âgées.",
 
   "languages.language1": "French",
   "languages.language2": "English",

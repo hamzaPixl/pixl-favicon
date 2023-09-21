@@ -39,3 +39,31 @@ export function SpecialistListCard({ title, link, image, mainDiscipline }) {
     </div>
   )
 }
+
+export function SpecialistListCardDisciplineDetail({ title, link, image, mainDiscipline }) {
+  return (
+    <div className='group text-black cursor-pointer shadow-lg rounded-xl'>
+      <div className='group-hover:transition-all group-hover:scale-105 group-hover:duration-300 duration-300 py-5 px-6'>
+        <Link href={link}>
+          <div className='bg-white flex flex-row gap-2 items-center justify-between'>
+            <div className='flex flex-row gap-2 items-center'>
+              <Image
+                loading='lazy'
+                className='rounded-full'
+                width={32}
+                height={32}
+                sizes='100vw'
+                alt='Specialist illustration'
+                src={image}
+              />
+              <div className='flex flex-col justify-between items-start'>
+                <div className='text-black font-bold text-base'>{title}</div>
+                <div className='text-gray-400 text-sm'>{mainDiscipline}</div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
+    </div>
+  )
+}

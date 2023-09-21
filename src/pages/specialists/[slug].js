@@ -21,7 +21,6 @@ export default function SpecialistDetail() {
 
   useEffect(() => {
     if (router.query.slug?.length > 0) {
-      console.log(allSpecialists.find((item) => item.link.includes(router.query.slug)))
       setSpecialist(allSpecialists.find((item) => item.link.includes(router.query.slug)))
     }
   }, [router.query])
@@ -179,22 +178,26 @@ export default function SpecialistDetail() {
                     </div>
                   ))}
                 </div>
-                {centers.map((location) => (
+                {specialist.locations.map((location) => (
                   <>
                     <div className='grid grid-flow-dense grid-cols-7 gap-4 w-full'>
                       <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10 col-span-2'>
-                        {location.title}
+                        {centers.find((c) => c.id === location)?.title}
                       </div>
                       {specialist.timetable.map((day, index) => (
                         <div key={`loc-${index}-${location.id}`} className='flex flex-row gap-1'>
                           <div
                             className={
-                              day.locations.find((f) => f.location === location.id).am
+                              day.locations.find(
+                                (f) => f.location === centers.find((c) => c.id === location).id,
+                              )?.am
                                 ? 'bg-primary-700/20 mx-auto justify-center flex w-1/2'
                                 : 'bg-gray-100 py-2 px-10 flex w-1/2'
                             }
                           >
-                            {day.locations.find((f) => f.location === location.id).am && (
+                            {day.locations.find(
+                              (f) => f.location === centers.find((c) => c.id === location).id,
+                            )?.am && (
                               <Image
                                 loading='lazy'
                                 width={24}
@@ -206,12 +209,16 @@ export default function SpecialistDetail() {
                           </div>
                           <div
                             className={
-                              day.locations.find((f) => f.location === location.id).pm
+                              day.locations.find(
+                                (f) => f.location === centers.find((c) => c.id === location).id,
+                              )?.pm
                                 ? 'bg-primary-700/20 py-2 mx-auto justify-center flex w-1/2'
                                 : 'bg-gray-100 py-2 px-10 items-center flex w-1/2'
                             }
                           >
-                            {day.locations.find((f) => f.location === location.id).pm && (
+                            {day.locations.find(
+                              (f) => f.location === centers.find((c) => c.id === location).id,
+                            )?.pm && (
                               <Image
                                 loading='lazy'
                                 width={24}
