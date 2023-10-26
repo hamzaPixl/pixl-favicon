@@ -21,7 +21,7 @@ export default function SEO() {
   const author = injected.author.url
   const url = injected.manifest.url
 
-  const image = pageInfo?.image || injected.manifest.icon
+  const image = pageInfo?.image || '/banner.png'
   const meta = [{ name: 'keywords', content: injected.keywords.concat(pageInfo?.meta?.keywords) }]
   const title = pageInfo?.meta?.title ? t(pageInfo?.meta?.title) : injected.title
   const description = pageInfo?.meta?.description
@@ -29,14 +29,6 @@ export default function SEO() {
     : injected.description
 
   const metaData = [
-    {
-      name: 'robots',
-      content: defaultMeta.robots,
-    },
-    {
-      name: `description`,
-      content: description,
-    },
     {
       property: `og:url`,
       content: `${url}${router.asPath}`,
@@ -90,16 +82,24 @@ export default function SEO() {
       name: `theme-color`,
       content: themeColor,
     },
+    {
+      name: 'robots',
+      content: defaultMeta.robots,
+    },
+    {
+      name: 'description',
+      content: description,
+    },
   ].concat(meta)
 
   const favicons = manifest.icons.concat([
     {
-      rel: 'icon',
-      src: '/favicon/favicon.ico',
-    },
-    {
       rel: 'manifest',
       src: '/manifest.json',
+    },
+    {
+      rel: 'icon',
+      src: '/favicon.ico',
     },
   ])
 

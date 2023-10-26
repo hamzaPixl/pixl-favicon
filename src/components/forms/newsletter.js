@@ -1,13 +1,26 @@
 import React from 'react'
 import { useTranslate } from '../../hooks/useTranslate'
 import Button from '../button'
+import { useRouter } from 'next/router'
 
 export default function NewsletterForm({ formSuccess, handleSubmit, formError }) {
+  const router = useRouter()
   const { t } = useTranslate()
   return (
-    <form method='POST' onSubmit={handleSubmit} name='newsletter' netlify='true' className=''>
+    <form
+      method='POST'
+      onSubmit={handleSubmit}
+      netlify-honeypot='bot-field'
+      action={router.pathname}
+      name='newsletter'
+    >
       <div className='flex flex-col flex-wrap gap-2 md:flex-row justify-between'>
         <input type='hidden' name='form-name' value='newsletter' />
+        <p className='hidden'>
+          <label>
+            Don’t fill this out if you’re human: <input name='bot-field' />
+          </label>
+        </p>
         <input
           type='email'
           name='email'

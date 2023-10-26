@@ -2,8 +2,10 @@ import React from 'react'
 import { InvertedButton } from '../button'
 import { useTranslate } from '../../hooks/useTranslate'
 import { centers } from '../../api/centers'
+import { useRouter } from 'next/router'
 
 export default function ContactForm({ formSuccess, handleSubmit, formError }) {
+  const router = useRouter()
   const { t } = useTranslate()
   return (
     <div className='text-black gap-4 flex flex-col justify-between items-left text-base font-normal w-full'>
@@ -20,11 +22,23 @@ export default function ContactForm({ formSuccess, handleSubmit, formError }) {
         </div>
       )}
       {
-        <form method='POST' onSubmit={handleSubmit} name='contact' netlify='true'>
+        <form
+          method='POST'
+          onSubmit={handleSubmit}
+          name='contact'
+          netlify-honeypot='bot-field'
+          action={router.pathname}
+          data-netlify='true'
+        >
           <div className='flex flex-col justify-between gap-4 w-full pb-10'>
             <div className='flex flex-col md:flex-row justify-between items-center gap-4 w-full'>
               <div className='flex flex-col gap-2 justify-start w-full'>
                 <input type='hidden' name='form-firstName' value='contact' />
+                <p className='hidden'>
+                  <label>
+                    Don’t fill this out if you’re human: <input name='bot-field' />
+                  </label>
+                </p>
                 <label className='font-bold'>{t('contact.form.firstName')}</label>
                 <input
                   type='text'
