@@ -41,12 +41,7 @@ export default function About() {
           </div>
           <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-4 gap-4 w-full'>
             {members.map((member) => (
-              <TeamMember
-                key={member.name}
-                name={member.name}
-                role={member.role}
-                image={member.image}
-              />
+              <TeamMember key={member.name} name={member.name} image={member.image} />
             ))}
           </div>
           <Newsletter />

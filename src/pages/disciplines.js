@@ -51,12 +51,7 @@ export default function Disciplines() {
         </div>
         <div className='w-full lg:grid grid-flow-dense grid-cols-4 gap-4 hidden'>
           {allDisciplines.slice(0, 4).map((discipline, i) => (
-            <DisciplineCard
-              key={`${discipline.name}-${i}`}
-              title={t(discipline.title)}
-              link={discipline.link}
-              image={discipline.defaultIcon}
-            />
+            <DisciplineCard discipline={discipline} key={`${discipline.name}-${i}`} />
           ))}
         </div>
         <div className='w-full flex flex-col items-start justify-between gap-4'>
@@ -64,12 +59,7 @@ export default function Disciplines() {
           <div className='flex gap-10 flex-col-reverse md:flex-row justify-between'>
             <div className='w-full lg:w-2/3 h-min grid grid-flow-dense grid-cols-1 gap-4'>
               {disciplines.map((discipline, i) => (
-                <DisciplineListCard
-                  key={`${discipline.name}-${i}`}
-                  title={t(discipline.title)}
-                  link={discipline.link}
-                  image={discipline.defaultIcon}
-                />
+                <DisciplineListCard key={`${discipline.name}-${i}`} discipline={discipline} />
               ))}
             </div>
             <div className='w-full lg:w-1/3'>

@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { useTranslate } from '../../hooks/useTranslate'
 
-export function SpecialistListCard({ title, link, image, mainDiscipline }) {
+export function SpecialistListCard({ specialist }) {
+  const { t } = useTranslate()
   return (
     <div className='group text-black cursor-pointer shadow-lg rounded-xl'>
       <div className='group-hover:transition-all group-hover:scale-105 group-hover:duration-300 duration-300 py-5 px-6'>
-        <Link href={link}>
+        <Link href={specialist.link}>
           <div className='bg-white flex flex-row gap-2 items-center justify-between'>
             <div className='flex flex-row gap-2 items-center'>
               <Image
@@ -16,11 +18,13 @@ export function SpecialistListCard({ title, link, image, mainDiscipline }) {
                 height={64}
                 sizes='100vw'
                 alt='Specialist illustration'
-                src={image}
+                src={specialist.avatar}
               />
               <div className='flex flex-col justify-between items-start'>
-                <div className='text-black font-bold text-base md:text-xl xl:text-2xl'>{title}</div>
-                <div className='text-gray-400 text-base'>{mainDiscipline}</div>
+                <div className='text-black font-bold text-base md:text-xl xl:text-2xl'>{`${specialist.title} ${specialist.firstName} ${specialist.lastName}`}</div>
+                <div className='text-gray-400 text-base'>
+                  {t(`disciplines.${specialist.mainDiscipline}.title`)}
+                </div>
               </div>
             </div>
             <div className='flex'>
@@ -40,11 +44,12 @@ export function SpecialistListCard({ title, link, image, mainDiscipline }) {
   )
 }
 
-export function SpecialistListCardDisciplineDetail({ title, link, image, mainDiscipline }) {
+export function SpecialistListCardDisciplineDetail({ specialist }) {
+  const { t } = useTranslate()
   return (
     <div className='group text-black cursor-pointer shadow-lg rounded-xl'>
       <div className='group-hover:transition-all group-hover:scale-105 group-hover:duration-300 duration-300 py-5 px-6'>
-        <Link href={link}>
+        <Link href={specialist.link}>
           <div className='bg-white flex flex-row gap-2 items-center justify-between'>
             <div className='flex flex-row gap-2 items-center'>
               <Image
@@ -54,11 +59,13 @@ export function SpecialistListCardDisciplineDetail({ title, link, image, mainDis
                 height={32}
                 sizes='100vw'
                 alt='Specialist illustration'
-                src={image}
+                src={specialist.avatar}
               />
               <div className='flex flex-col justify-between items-start'>
-                <div className='text-black font-bold text-base'>{title}</div>
-                <div className='text-gray-400 text-sm'>{mainDiscipline}</div>
+                <div className='text-black font-bold text-base'>{`${specialist.title} ${specialist.firstName} ${specialist.lastName}`}</div>
+                <div className='text-gray-400 text-sm'>
+                  {t(`disciplines.${specialist.mainDiscipline}.title`)}
+                </div>
               </div>
             </div>
           </div>

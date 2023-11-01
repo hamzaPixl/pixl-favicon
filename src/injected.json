@@ -12,16 +12,6 @@
     "backgroundColor": "#ffffff"
   },
   "gtag": "G-4D172TWJ4H",
-  "colors": {
-    "global": "#000000",
-    "globalText": "#ffffff",
-    "secondText": "#000000",
-    "highlight": "#FFE58A",
-    "highlightText": "#76C0AB",
-    "overlay": "#000000",
-    "background": "#76c0ab",
-    "accentBackground": "#58A78E"
-  },
   "pages": [
     {
       "title": "link.home",
@@ -82,45 +72,28 @@
   "socials": [
     {
       "title": "facebook",
-      "link": "https://www.facebook.com"
+      "link": "https://www.facebook.com/profile.php?id=100093811826892"
     },
     {
       "title": "instagram",
-      "link": "https://www.instagram.com"
+      "link": "https://www.instagram.com/centre_medistia_/"
     },
     {
       "title": "linkedin",
-      "link": "https://www.linkedin.com"
+      "link": "https://www.linkedin.com/feed/?trk=onboarding-landing"
     }
   ],
-  "sla": [
-    {
-      "title": "@ 2023 Medistia SPRL",
-      "link": "/"
-    },
-    {
-      "title": "Privacy Policy",
-      "link": "/policy/privacy"
-    },
-    {
-      "title": "Terms Policy",
-      "link": "/policy/terms"
-    },
-    {
-      "title": "Cookie Policy",
-      "link": "/policy/cookie"
-    }
-  ],
+  "sla": [],
   "address": {
     "url": "https://goo.gl/maps/3PUt1WiDQX2icvds5",
     "address": "Chau. de Wavre 1341, 1160 Auderghem, Belgique"
   },
   "companyName": "Medistia SRL",
-  "tel": "+32474299576",
-  "email": "info@clevertech.be",
-  "tva": "BE 2220.556.668",
-  "locales": ["fr", "nl", "en"],
-  "defaultLocale": "en",
+  "tel": "026722375",
+  "email": "info@medistia.be",
+  "tva": "BE 0794.537.292",
+  "locales": ["fr"],
+  "defaultLocale": "fr",
   "author": {
     "name": "Clevertech",
     "url": "https://www.clevertech.be"

@@ -54,13 +54,7 @@ export default function Specialists() {
           <div className='flex gap-10 flex-col-reverse md:flex-row justify-between'>
             <div className='w-full lg:w-2/3 h-min grid grid-flow-dense grid-cols-1 gap-4'>
               {specialists.map((specialist, i) => (
-                <SpecialistListCard
-                  key={`${specialist.firstName}-${i}`}
-                  title={specialist.title}
-                  link={specialist.link}
-                  image={specialist.avatar}
-                  mainDiscipline={t(`disciplines.${specialist.mainDiscipline}.title`)}
-                />
+                <SpecialistListCard specialist={specialist} key={`${specialist.firstName}-${i}`} />
               ))}
             </div>
             <div className='w-full lg:w-1/3'>

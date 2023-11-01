@@ -9,8 +9,9 @@ import InfoBox from '../../components/cards/infoBox'
 import Image from 'next/image'
 import Link from 'next/link'
 import { centers } from '../../api/centers'
-import { allDisciplines } from '../../api/disciplines'
 import { DisciplineListSpecialistDetail } from '../../components/cards/discipline'
+import injected from '../../injected.json'
+import { allDisciplines } from '../../api/disciplines'
 
 const week = ['mon', 'tue', 'wed', 'thu', 'fri']
 
@@ -43,7 +44,7 @@ export default function SpecialistDetail() {
                   />
                   <InvertedButton
                     message={t('appointment.button')}
-                    link={'/'}
+                    link={`tel:${specialist.contact.phone || injected.tel}`}
                     className={'w-full'}
                   />
                 </div>
@@ -57,7 +58,11 @@ export default function SpecialistDetail() {
                       alt='Contact phone illustration'
                       src={'/icons/phone-primary.svg'}
                     />
-                    <Link href={`tel:${specialist.contact.phone}`}>{specialist.contact.phone}</Link>
+                    {specialist.contact.phone && (
+                      <Link href={`tel:${specialist.contact.phone}`}>
+                        {specialist.contact.phone}
+                      </Link>
+                    )}
                   </div>
                   <div className='flex flex-row gap-2'>
                     <Image
@@ -67,9 +72,11 @@ export default function SpecialistDetail() {
                       alt='Contact mail illustration'
                       src={'/icons/mail-primary.svg'}
                     />
-                    <Link href={`mailto:${specialist.contact.email}`}>
-                      {specialist.contact.email}
-                    </Link>
+                    {specialist.contact.email && (
+                      <Link href={`mailto:${specialist.contact.email}`}>
+                        {specialist.contact.email}
+                      </Link>
+                    )}
                   </div>
                   <div className='flex flex-row gap-2'>
                     <Image
@@ -79,9 +86,11 @@ export default function SpecialistDetail() {
                       alt='Contact web illustration'
                       src={'/icons/web.svg'}
                     />
-                    <Link arget='_blank' href={`https://${specialist.contact.web}`}>
-                      {specialist.contact.web}
-                    </Link>
+                    {specialist.contact.web && (
+                      <Link arget='_blank' href={`https://${specialist.contact.web}`}>
+                        {specialist.contact.web}
+                      </Link>
+                    )}
                   </div>
                 </div>
                 <div className='flex flex-col gap-1 justify-between items-start'>
@@ -91,9 +100,7 @@ export default function SpecialistDetail() {
                       {specialist.disciplines.map((d, index) => (
                         <li key={`di-${index}`} className='py-2'>
                           <DisciplineListSpecialistDetail
-                            title={t(`disciplines.${d}.title`)}
-                            link={allDisciplines.find((f) => f.id === d).link}
-                            image={allDisciplines.find((f) => f.id === d).defaultIcon}
+                            discipline={allDisciplines.find((f) => f.id === d)}
                           />
                         </li>
                       ))}
@@ -103,7 +110,7 @@ export default function SpecialistDetail() {
               </div>
               <div className='w-full md:w-2/3 flex flex-col gap-5 justify-between items-start'>
                 <div className='flex flex-col gap-1 justify-between items-start'>
-                  <div className='text-3xl xl:text-4xl font-bold'>{specialist.title}</div>
+                  <div className='text-3xl xl:text-4xl font-bold'>{`${specialist.title} ${specialist.firstName} ${specialist.lastName}`}</div>
                   <div className='text-base text-primary-700 font-bold'>
                     {t(`disciplines.${specialist.mainDiscipline}.title`)}
                   </div>
@@ -167,10 +174,10 @@ export default function SpecialistDetail() {
                 </div>
                 {specialist.locations.map((location, index) => (
                   <div
-                    className='flex flex-col gap-2 items-start pb-10'
+                    className='flex flex-col gap-2 items-start pb-10 w-full'
                     key={`loc-location.id-spe-${index}`}
                   >
-                    <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10'>
+                    <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10 w-full'>
                       {centers.find((c) => c.id === location)?.title}
                     </div>
                     <div className='grid grid-flow-dense grid-cols-5 gap-2 w-full'>
@@ -256,60 +263,58 @@ export default function SpecialistDetail() {
                     </div>
                   ))}
                 </div>
-                {specialist.locations.map((location) => (
-                  <>
-                    <div className='grid grid-flow-dense grid-cols-7 gap-4 w-full'>
-                      <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10 col-span-2'>
-                        {centers.find((c) => c.id === location)?.title}
-                      </div>
-                      {specialist.timetable.map((day, index) => (
-                        <div key={`loc-${index}-${location.id}`} className='flex flex-row gap-1'>
-                          <div
-                            className={
-                              day.locations.find(
-                                (f) => f.location === centers.find((c) => c.id === location).id,
-                              )?.am
-                                ? 'bg-primary-700/20 mx-auto justify-center flex w-1/2'
-                                : 'bg-gray-100 py-2 px-10 flex w-1/2'
-                            }
-                          >
-                            {day.locations.find(
-                              (f) => f.location === centers.find((c) => c.id === location).id,
-                            )?.am && (
-                              <Image
-                                loading='lazy'
-                                width={24}
-                                height={24}
-                                src={`/icons/green-flag.svg`}
-                                alt={`green-flag`}
-                              />
-                            )}
-                          </div>
-                          <div
-                            className={
-                              day.locations.find(
-                                (f) => f.location === centers.find((c) => c.id === location).id,
-                              )?.pm
-                                ? 'bg-primary-700/20 py-2 mx-auto justify-center flex w-1/2'
-                                : 'bg-gray-100 py-2 px-10 items-center flex w-1/2'
-                            }
-                          >
-                            {day.locations.find(
-                              (f) => f.location === centers.find((c) => c.id === location).id,
-                            )?.pm && (
-                              <Image
-                                loading='lazy'
-                                width={24}
-                                height={24}
-                                src={`/icons/green-flag.svg`}
-                                alt={`green-flag`}
-                              />
-                            )}
-                          </div>
-                        </div>
-                      ))}
+                {specialist.locations.map((location, index) => (
+                  <div className='grid grid-flow-dense grid-cols-7 gap-4 w-full' key={index}>
+                    <div className='text-white bg-primary-700 pl-5 font-bold text-base py-2 px-10 col-span-2'>
+                      {centers.find((c) => c.id === location)?.title}
                     </div>
-                  </>
+                    {specialist.timetable.map((day, index) => (
+                      <div key={`loc-${index}-${location.id}`} className='flex flex-row gap-1'>
+                        <div
+                          className={
+                            day.locations.find(
+                              (f) => f.location === centers.find((c) => c.id === location).id,
+                            )?.am
+                              ? 'bg-primary-700/20 mx-auto justify-center flex w-1/2'
+                              : 'bg-gray-100 py-2 px-10 flex w-1/2'
+                          }
+                        >
+                          {day.locations.find(
+                            (f) => f.location === centers.find((c) => c.id === location).id,
+                          )?.am && (
+                            <Image
+                              loading='lazy'
+                              width={24}
+                              height={24}
+                              src={`/icons/green-flag.svg`}
+                              alt={`green-flag`}
+                            />
+                          )}
+                        </div>
+                        <div
+                          className={
+                            day.locations.find(
+                              (f) => f.location === centers.find((c) => c.id === location).id,
+                            )?.pm
+                              ? 'bg-primary-700/20 py-2 mx-auto justify-center flex w-1/2'
+                              : 'bg-gray-100 py-2 px-10 items-center flex w-1/2'
+                          }
+                        >
+                          {day.locations.find(
+                            (f) => f.location === centers.find((c) => c.id === location).id,
+                          )?.pm && (
+                            <Image
+                              loading='lazy'
+                              width={24}
+                              height={24}
+                              src={`/icons/green-flag.svg`}
+                              alt={`green-flag`}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 ))}
               </div>
             </div>
@@ -317,7 +322,7 @@ export default function SpecialistDetail() {
         )}
 
         <InfoBox title={t('appointment.title')} description={t('appointment.description')}>
-          <Button message={t('appointment.button')} link={'/'} />
+          <Button message={t('appointment.button')} link={'/contact'} />
         </InfoBox>
       </Container>
     </Layout>

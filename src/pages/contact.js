@@ -49,7 +49,7 @@ export default function Contact() {
                   key={`center-${index}`}
                   image={center.image}
                   title={center.title}
-                  location={center.location}
+                  address={center.address}
                   locationLink={center.locationLink}
                   time={center.time}
                 />

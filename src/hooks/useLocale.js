@@ -1,12 +1,8 @@
 import { useRouter } from 'next/router'
 import { useCallback, useMemo } from 'react'
-import en from '../locales/en.json'
 import fr from '../locales/fr.json'
-import nl from '../locales/nl.json'
 
 const messages = {
-  en,
-  nl,
   fr,
 }
 

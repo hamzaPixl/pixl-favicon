@@ -1,22 +1,14 @@
 export const members = [
   {
-    name: 'John Doe',
-    role: 'CEO',
-    image: '/images/team/john-doe.png',
+    name: 'Laura van der Hoeden',
+    image: '/images/team/laura.png',
   },
   {
-    name: 'John Doe 2',
-    role: 'CTO',
-    image: '/images/team/john-doe.png',
+    name: 'Pierre Halloy',
+    image: '/images/team/pierre.jpeg',
   },
   {
-    name: 'John Doe 3',
-    role: 'CFO',
-    image: '/images/team/john-doe.png',
-  },
-  {
-    name: 'John Doel 4',
-    role: 'COO',
-    image: '/images/team/john-doe.png',
+    name: 'Ayyoub Ismail',
+    image: '/images/team/ayyoub.jpeg',
   },
 ]

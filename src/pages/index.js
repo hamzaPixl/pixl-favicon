@@ -50,17 +50,12 @@ export default function Home() {
 
         <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full'>
           {allDisciplines.slice(0, 8).map((discipline) => (
-            <DisciplineCard
-              key={discipline.name}
-              link={discipline.link}
-              title={t(discipline.title)}
-              image={discipline.defaultIcon}
-            />
+            <DisciplineCard key={discipline.id} discipline={discipline} />
           ))}
         </div>
 
         <InfoBox title={t('appointment.title')} description={t('appointment.description')}>
-          <Button message={t('appointment.button')} link={'/'} />
+          <Button message={t('appointment.button')} link={'/contact'} />
         </InfoBox>
 
         <div className='grid grid-flow-dense grid-cols-1 md:grid-cols-3 gap-4 w-full'>

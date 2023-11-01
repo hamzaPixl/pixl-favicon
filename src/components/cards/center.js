@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function CenterCard({ image, title, location, locationLink, time }) {
+export default function CenterCard({ image, title, address, locationLink, time }) {
   return (
     <div className='flex flex-col md:flex-row items-center'>
       <div className='h-[200px] md:h-full w-full md:w-[120px] relative'>
@@ -17,7 +17,7 @@ export default function CenterCard({ image, title, location, locationLink, time 
             alt='Center location illustration'
             src={'/icons/location.svg'}
           />
-          <Link href={locationLink}>{location}</Link>
+          <Link href={locationLink}>{address}</Link>
         </div>
         <div className='flex flex-row gap-2 text-sm items-center'>
           <Image

@@ -28,7 +28,7 @@ export default function DisciplineDetail() {
 
   useEffect(() => {
     if (router.query.slug?.length > 0) {
-      const disc = allDisciplines.find((item) => item.name === router.query.slug)
+      const disc = allDisciplines.find((item) => item.id === router.query.slug)
       setDiscipline(disc)
       let specialists = []
       if (router.query.location?.length > 0) {
@@ -97,14 +97,9 @@ export default function DisciplineDetail() {
               {specialists.map((specialist, index) => (
                 <div
                   key={`loc-${index}-${specialist.title}`}
-                  className='flex flex-col gap-2 items-left pb-10'
+                  className='flex flex-col gap-2 items-left pb-10 w-full'
                 >
-                  <SpecialistListCardDisciplineDetail
-                    title={specialist.title}
-                    link={specialist.link}
-                    image={specialist.avatar}
-                    mainDiscipline={t(`disciplines.${specialist.mainDiscipline}.title`)}
-                  />
+                  <SpecialistListCardDisciplineDetail specialist={specialist} />
                   <div className='grid grid-flow-dense grid-cols-5 gap-2 w-full'>
                     {week.map((d, index) => (
                       <div
@@ -178,12 +173,7 @@ export default function DisciplineDetail() {
                   className='grid grid-flow-dense grid-cols-7 gap-4 w-full'
                 >
                   <div className='col-span-2'>
-                    <SpecialistListCardDisciplineDetail
-                      title={specialist.title}
-                      link={specialist.link}
-                      image={specialist.avatar}
-                      mainDiscipline={t(`disciplines.${specialist.mainDiscipline}.title`)}
-                    />
+                    <SpecialistListCardDisciplineDetail specialist={specialist} />
                   </div>
                   {specialist.timetable.map((day, index) => (
                     <div key={`day-${index}`} className='w-full flex flex-row gap-2'>
@@ -229,7 +219,7 @@ export default function DisciplineDetail() {
           </>
         )}
         <InfoBox title={t('appointment.title')} description={t('appointment.description')}>
-          <Button message={t('appointment.button')} link={'/'} />
+          <Button message={t('appointment.button')} link={'/contact'} />
         </InfoBox>
         <Faq />
       </Container>
