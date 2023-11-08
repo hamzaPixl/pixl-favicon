@@ -8,8 +8,10 @@ import Faq from '../components/faq'
 import ContactCard from '../components/cards/contact'
 import { centers } from '../api/centers'
 import CenterCard from '../components/cards/center'
+import { useRouter } from 'next/router'
 
 export default function Contact() {
+  const router = useRouter()
   const { t } = useTranslate()
   const [formSuccess, setFormSuccess] = useState()
   const [formError, setFormError] = useState()
@@ -19,7 +21,7 @@ export default function Contact() {
 
     const myForm = event.target
     const formData = new FormData(myForm)
-    fetch('/', {
+    fetch(`/${router.locale}${router.asPath}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),

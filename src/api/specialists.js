@@ -1,6 +1,6 @@
 export const allSpecialists = [
   {
-    title: 'Docteur',
+    title: 'Mme',
     firstName: 'Laura',
     lastName: 'van der Hoeden',
     link: '/specialists/lauravanderhodeden',

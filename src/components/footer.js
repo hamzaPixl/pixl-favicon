@@ -77,7 +77,7 @@ export default function Footer() {
           <div className='flex gap-2 flex-col flex-wrap font-bold text-base'>
             <div>{t('footer.recruit.title')}</div>
             <div className='underline underline-offset-8 transition-all'>
-              <Link href={'/'}>{t('footer.recruit.headline')}</Link>
+              <Link href={'/contact'}>{t('footer.recruit.headline')}</Link>
             </div>
           </div>
         </div>

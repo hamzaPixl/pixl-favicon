@@ -51,7 +51,7 @@ export const allDisciplines = [
     id: 'psychiatrie',
     title: 'disciplines.psychiatrie.title',
     description: 'disciplines.psychiatrie.description',
-    defaultImage: '/images/disciplines/general.jpg',
+    defaultImage: '/images/disciplines/psycho.jpg',
     defaultIcon: '/icons/discipline/psycho.svg',
     link: '/disciplines/psychiatrie',
   },
