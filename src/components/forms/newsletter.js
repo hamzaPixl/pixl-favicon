@@ -11,6 +11,7 @@ export default function NewsletterForm({ formSuccess, handleSubmit, formError })
       method='POST'
       onSubmit={handleSubmit}
       netlify-honeypot='bot-field'
+      data-netlify='true'
       action={router.pathname}
       name='newsletter'
     >
