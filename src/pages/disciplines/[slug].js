@@ -62,7 +62,11 @@ export default function DisciplineDetail() {
                   src={discipline.defaultIcon}
                 />
                 <div className='text-3xl xl:text-4xl font-bold'>{t(discipline.title)}</div>
-                <div className='text-base'>{t(discipline.description)}</div>
+                {t(discipline.description)
+                  .split('\n')
+                  .map((line, index) => (
+                    <div key={index}>{line}</div>
+                  ))}
               </div>
               <div className='rounded-xl h-[240px] md:h-[420px] lg:h-[340px] w-full lg:w-1/2 relative'>
                 <Image

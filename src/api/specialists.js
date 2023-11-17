@@ -65,7 +65,325 @@ export const allSpecialists = [
     ],
   },
   {
-    title: 'Docteur',
+    title: 'M.',
+    firstName: 'Pierre',
+    lastName: 'Halloy',
+    link: '/specialists/pierrehalloy',
+    disciplines: ['psychologie'],
+    mainDiscipline: 'psychologie',
+    avatar: '/images/specialists/pierrehalloy.jpeg',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Koekelberg'],
+    languages: [],
+    description: 'specialists.pierrehalloy.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Koekelberg',
+            am: true,
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Koekelberg',
+            am: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'M.',
+    firstName: 'Ayyoub',
+    lastName: 'Ismail',
+    link: '/specialists/ayyoubismail',
+    disciplines: ['kineGlobal'],
+    mainDiscipline: 'kineGlobal',
+    avatar: '/images/specialists/ayyoubismail.jpeg',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Koekelberg'],
+    languages: [],
+    description: 'specialists.ayyoubismail.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Dr.',
+    firstName: 'Loubna',
+    lastName: 'Cherqi',
+    link: '/specialists/loubnacherqi',
+    disciplines: ['generaliste'],
+    mainDiscipline: 'generaliste',
+    avatar: '/images/specialists/avatar.png',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Koekelberg'],
+    languages: [],
+    description: 'specialists.loubnacherqi.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Koekelberg',
+            am: true,
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Koekelberg',
+            am: true,
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Koekelberg',
+            pm: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Dr.',
+    firstName: 'Younes',
+    lastName: 'Kemouni',
+    link: '/specialists/youneskemouni',
+    disciplines: ['generaliste'],
+    mainDiscipline: 'generaliste',
+    avatar: '/images/specialists/avatar.png',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Koekelberg'],
+    languages: [],
+    description: 'specialists.youneskemouni.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Koekelberg',
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Koekelberg',
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Koekelberg',
+            am: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Mme.',
+    firstName: 'Ivy',
+    lastName: 'Duong',
+    link: '/specialists/ivyduong',
+    disciplines: ['kineGlobal'],
+    mainDiscipline: 'kineGlobal',
+    avatar: '/images/specialists/avatar.png',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Koekelberg'],
+    languages: [],
+    description: 'specialists.ivyduong.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Koekelberg',
+            am: true,
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Koekelberg',
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Koekelberg',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Dr.',
     firstName: 'Claude',
     lastName: 'Peellaert',
     link: '/specialists/claudepeellaert',
@@ -331,7 +649,7 @@ export const allSpecialists = [
     ],
   },
   {
-    title: 'Docteur',
+    title: 'Dr.',
     firstName: 'Wolfram',
     lastName: 'Frasschnacht',
     link: '/specialists/wolframfrasschnacht',
@@ -456,19 +774,21 @@ export const allSpecialists = [
         locations: [
           {
             location: 'Auderghem',
+            am: true,
+            pm: true,
           },
         ],
       },
     ],
   },
   {
-    title: 'Docteur',
+    title: 'Dr.',
     firstName: 'Guillermo',
     lastName: 'Duque Barrera ',
     link: '/specialists/guillermoduquebarrera',
     disciplines: ['psychiatrie'],
     mainDiscipline: 'psychiatrie',
-    avatar: '/images/specialists/avatar.png',
+    avatar: '/images/specialists/duque.jpg',
     contact: {
       phone: '',
       email: '',
@@ -647,7 +967,7 @@ export const allSpecialists = [
     ],
   },
   {
-    title: 'Docteur',
+    title: 'Dr.',
     firstName: 'Marc',
     lastName: 'De Roose',
     link: '/specialists/marcderoose',
@@ -661,7 +981,7 @@ export const allSpecialists = [
     },
     patients: [],
     interests: [],
-    locations: ['Auderghem'],
+    locations: ['Auderghem', 'Koekelberg'],
     languages: [],
     description: 'specialists.marcderoose.description',
     timetable: [
@@ -687,6 +1007,10 @@ export const allSpecialists = [
         locations: [
           {
             location: 'Auderghem',
+          },
+          {
+            location: 'Koekelberg',
+            pm: true,
           },
         ],
       },
@@ -715,7 +1039,7 @@ export const allSpecialists = [
     link: '/specialists/zakiyaserouane',
     disciplines: ['reflexionPlantaire'],
     mainDiscipline: 'reflexionPlantaire',
-    avatar: '/images/specialists/avatar.png',
+    avatar: '/images/specialists/zakiya.jpg',
     contact: {
       phone: '',
       email: '',
@@ -963,8 +1287,8 @@ export const allSpecialists = [
     firstName: 'Shala',
     lastName: 'Mohammad',
     link: '/specialists/shalamohammad',
-    disciplines: ['dentist'],
-    mainDiscipline: 'dentist',
+    disciplines: ['stomatologie'],
+    mainDiscipline: 'stomatologie',
     avatar: '/images/specialists/avatar.png',
     contact: {
       phone: '',
@@ -1215,7 +1539,7 @@ export const allSpecialists = [
     link: '/specialists/deprejuliette',
     disciplines: ['sexologie'],
     mainDiscipline: 'sexologie',
-    avatar: '/images/specialists/avatar.png',
+    avatar: '/images/specialists/julietteDepre.jpg',
     contact: {
       phone: '',
       email: '',

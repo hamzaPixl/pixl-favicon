@@ -58,11 +58,9 @@ export default function SpecialistDetail() {
                       alt='Contact phone illustration'
                       src={'/icons/phone-primary.svg'}
                     />
-                    {specialist.contact.phone && (
-                      <Link href={`tel:${specialist.contact.phone}`}>
-                        {specialist.contact.phone}
-                      </Link>
-                    )}
+                    <Link href={`tel:${specialist.contact.phone || injected.tel}`}>
+                      {specialist.contact.phone || injected.tel}
+                    </Link>
                   </div>
                   <div className='flex flex-row gap-2'>
                     <Image
@@ -72,11 +70,9 @@ export default function SpecialistDetail() {
                       alt='Contact mail illustration'
                       src={'/icons/mail-primary.svg'}
                     />
-                    {specialist.contact.email && (
-                      <Link href={`mailto:${specialist.contact.email}`}>
-                        {specialist.contact.email}
-                      </Link>
-                    )}
+                    <Link href={`mailto:${specialist.contact.email || injected.email}`}>
+                      {specialist.contact.email || injected.email}
+                    </Link>
                   </div>
                   <div className='flex flex-row gap-2'>
                     <Image
@@ -86,11 +82,10 @@ export default function SpecialistDetail() {
                       alt='Contact web illustration'
                       src={'/icons/web.svg'}
                     />
-                    {specialist.contact.web && (
-                      <Link arget='_blank' href={`https://${specialist.contact.web}`}>
-                        {specialist.contact.web}
-                      </Link>
-                    )}
+
+                    <Link arget='_blank' href={specialist.contact.web || injected.web}>
+                      {specialist.contact.web || injected.web}
+                    </Link>
                   </div>
                 </div>
                 <div className='flex flex-col gap-1 justify-between items-start'>
@@ -118,7 +113,7 @@ export default function SpecialistDetail() {
                 <div className='flex flex-col gap-1 justify-between items-start'>
                   <div className='text-base text-black'>
                     {t(specialist.description)
-                      .split('\n\n')
+                      .split('\n')
                       .map((paragraph, index) => (
                         <p key={`desc-${index}`} className='py-2'>
                           {paragraph}

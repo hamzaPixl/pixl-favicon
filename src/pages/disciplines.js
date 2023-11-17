@@ -58,9 +58,11 @@ export default function Disciplines() {
           <SearchForm handleChange={handleChange} />
           <div className='flex gap-10 flex-col-reverse md:flex-row justify-between'>
             <div className='w-full lg:w-2/3 h-min grid grid-flow-dense grid-cols-1 gap-4'>
-              {disciplines.map((discipline, i) => (
-                <DisciplineListCard key={`${discipline.name}-${i}`} discipline={discipline} />
-              ))}
+              {disciplines
+                .sort((a, b) => (t(a.title) < t(b.title) ? -1 : 1))
+                .map((discipline, i) => (
+                  <DisciplineListCard key={`${discipline.name}-${i}`} discipline={discipline} />
+                ))}
             </div>
             <div className='w-full lg:w-1/3'>
               <InfoBoxList

@@ -89,8 +89,9 @@
     "address": "Chau. de Wavre 1341, 1160 Auderghem, Belgique"
   },
   "companyName": "Medistia SRL",
-  "tel": "026722375",
+  "tel": "02/672.23.75",
   "email": "info@medistia.be",
+  "web": "http://www.medistia.be",
   "tva": "BE 0794.537.292",
   "locales": ["fr"],
   "defaultLocale": "fr",
