@@ -190,6 +190,258 @@ export const allSpecialists = [
     ],
   },
   {
+    title: 'M',
+    firstName: 'Ronaldo',
+    lastName: 'Espinoza',
+    link: '/specialists/ronaldoespinoza',
+    disciplines: ['kineGlobal'],
+    mainDiscipline: 'kineGlobal',
+    avatar: '/images/specialists/avatar.png',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Auderghem'],
+    languages: [],
+    description: 'specialists.ronaldoespinoza.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Auderghem',
+            am: true,
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Auderghem',
+            am: true,
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Auderghem',
+            am: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Mme',
+    firstName: 'Laurence',
+    lastName: 'Loterie',
+    link: '/specialists/laurenceloterie',
+    disciplines: ['psychologie'],
+    mainDiscipline: 'psychologie',
+    avatar: '/images/specialists/avatar.png',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Auderghem'],
+    languages: [],
+    description: 'specialists.laurenceloterie.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Auderghem',
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Mme',
+    firstName: 'Charlotte',
+    lastName: 'Dupont',
+    link: '/specialists/charlottedupont',
+    disciplines: ['dietetique'],
+    mainDiscipline: 'dietetique',
+    avatar: '/images/specialists/charlotteDupont.jpg',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Auderghem'],
+    languages: [],
+    description: 'specialists.charlottedupont.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Auderghem',
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Mme',
+    firstName: 'Lallemand',
+    lastName: 'Eloise',
+    link: '/specialists/lallemandeloise',
+    disciplines: ['psychologie'],
+    mainDiscipline: 'psychologie',
+    avatar: '/images/specialists/avatar.png',
+    contact: {
+      phone: '',
+      email: '',
+      web: '',
+    },
+    patients: [],
+    interests: [],
+    locations: ['Auderghem'],
+    languages: [],
+    description: 'specialists.lallemandeloise.description',
+    timetable: [
+      {
+        day: 1,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 2,
+        locations: [
+          {
+            location: 'Auderghem',
+            pm: true,
+          },
+        ],
+      },
+      {
+        day: 3,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 4,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+      {
+        day: 5,
+        locations: [
+          {
+            location: 'Auderghem',
+          },
+        ],
+      },
+    ],
+  },
+  {
     title: 'Dr.',
     firstName: 'Loubna',
     lastName: 'Cherqi',
