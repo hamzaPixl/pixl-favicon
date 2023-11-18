@@ -73,14 +73,14 @@ export const allSpecialists = [
     mainDiscipline: 'psychologie',
     avatar: '/images/specialists/pierrehalloy.jpeg',
     contact: {
-      phone: '',
-      email: '',
-      web: '',
+      phone: '0460/22.66.07',
+      email: 'contact@pierrehalloy.com',
+      web: 'www.pierrehalloy.com',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes '],
+    interests: ['Hypnose PTR', 'Palo Alto', 'Traumtismes'],
     locations: ['Koekelberg'],
-    languages: [],
+    languages: ['Français', 'Anglais'],
     description: 'specialists.pierrehalloy.description',
     timetable: [
       {
@@ -141,10 +141,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes'],
+    interests: ['Kinésithérapie', 'revalidation'],
     locations: ['Koekelberg'],
-    languages: [],
+    languages: ['Français'],
     description: 'specialists.ayyoubismail.description',
     timetable: [
       {

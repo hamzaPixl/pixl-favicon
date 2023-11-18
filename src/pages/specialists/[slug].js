@@ -127,7 +127,7 @@ export default function SpecialistDetail() {
                     <ul className='list-disc'>
                       {specialist.interests.map((interest, index) => (
                         <li key={`in-${index}`} className='py-2'>
-                          {t(interest)}
+                          {interest}
                         </li>
                       ))}
                     </ul>
@@ -139,7 +139,7 @@ export default function SpecialistDetail() {
                     <ul className='list-disc'>
                       {specialist.patients.map((patient, index) => (
                         <li key={`pa-${index}`} className='py-2'>
-                          {t(patient)}
+                          {patient}
                         </li>
                       ))}
                     </ul>
@@ -151,7 +151,7 @@ export default function SpecialistDetail() {
                     <ul className='list-disc'>
                       {specialist.languages.map((lang, index) => (
                         <li key={`lng-${index}`} className='py-2'>
-                          {t(lang)}
+                          {lang}
                         </li>
                       ))}
                     </ul>
