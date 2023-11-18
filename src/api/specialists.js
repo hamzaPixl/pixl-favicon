@@ -8,14 +8,18 @@ export const allSpecialists = [
     mainDiscipline: 'psychologie',
     avatar: '/images/specialists/lauravanderhodeden.png',
     contact: {
-      phone: '',
-      email: '',
-      web: '',
+      phone: '0472/66.27.01',
+      email: 'laura.vdh.psy@gmail.com',
+      web: 'www.lauravdh.com',
     },
-    patients: [],
-    interests: [],
+    patients: ['adultes'],
+    interests: [
+      'Hypnose PTR',
+      'douleurs périnéales (endométriose, névralgies pudendales, vestibulodynie, dyspareunies, …)',
+      'traumatismes',
+    ],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.lauravanderhodeden.description',
     timetable: [
       {
@@ -202,10 +206,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['enfants'],
+    interests: ['pathologies pulmonaires aigues et chroniques'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français', 'anglais', 'espagnol'],
     description: 'specialists.ronaldoespinoza.description',
     timetable: [
       {
@@ -264,14 +268,14 @@ export const allSpecialists = [
     mainDiscipline: 'psychologie',
     avatar: '/images/specialists/avatar.png',
     contact: {
-      phone: '',
-      email: '',
+      phone: '0484/94.66.38',
+      email: 'loterielaurence@gmail.com',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['enfants', 'Adolescents', 'adultes'],
+    interests: ['thérapies familiales', 'Orientation scolaire et professionnelle'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.laurenceloterie.description',
     timetable: [
       {
@@ -326,14 +330,19 @@ export const allSpecialists = [
     mainDiscipline: 'dietetique',
     avatar: '/images/specialists/charlotteDupont.jpg',
     contact: {
-      phone: '',
-      email: '',
+      phone: '0497/74.13.66',
+      email: 'charlotte.dupont189@gmail.com',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adolescents', 'adultes'],
+    interests: [
+      'Troubles de la conduite alimentaire',
+      'diabète',
+      'obésité',
+      'prise ou perte de poids',
+    ],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.charlottedupont.description',
     timetable: [
       {
@@ -392,10 +401,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adolescents', 'Adultes'],
+    interests: ['EVRAS', 'Psychologie générale '],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['Français'],
     description: 'specialists.lallemandeloise.description',
     timetable: [
       {
@@ -454,10 +463,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes', 'Enfants', 'Adolescents'],
+    interests: ['Médecine générale'],
     locations: ['Koekelberg', 'Auderghem'],
-    languages: [],
+    languages: ['Français', 'Arabe'],
     description: 'specialists.loubnacherqi.description',
     timetable: [
       {
@@ -592,10 +601,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes'],
+    interests: ['Kinésithérapie', 'revalidation', 'kiné périnéale'],
     locations: ['Koekelberg'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.ivyduong.description',
     timetable: [
       {
@@ -655,10 +664,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes'],
+    interests: ['Gynécologie', 'Obstétrique'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.claudepeellaert.description',
     timetable: [
       {
@@ -714,14 +723,14 @@ export const allSpecialists = [
     mainDiscipline: 'kineGlobal',
     avatar: '/images/specialists/roxanelatour.jpeg',
     contact: {
-      phone: '',
-      email: '',
+      phone: '0471/96.71.45',
+      email: 'roxanelatour.kine@gmail.com',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes', 'Enfants'],
+    interests: ['thérapie manuelle', 'drainage lymphatique'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.roxanelatour.description',
     timetable: [
       {
@@ -789,10 +798,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['enfants', 'adultes'],
+    interests: ['thérapie manuelle', 'drainage lymphatique'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.cerisegeneau.description',
     timetable: [
       {
@@ -854,10 +863,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes', 'enfants'],
+    interests: ['Kinésithérapie périnéale '],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.wendyattipoe.description',
     timetable: [
       {
@@ -921,10 +930,15 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes', 'Enfants'],
+    interests: [
+      'Troubles du sommeil',
+      'Rhinosinusite chronique',
+      'Ronflements',
+      'Chirurgie fonctionnelle naso-sinusale',
+    ],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français', 'allemand'],
     description: 'specialists.wolframfrasschnacht.description',
     timetable: [
       {
@@ -979,14 +993,14 @@ export const allSpecialists = [
     mainDiscipline: 'audiologie',
     avatar: '/images/specialists/solenecoppens.jpeg',
     contact: {
-      phone: '',
-      email: '',
+      phone: '0484/13.62.65',
+      email: 'solennecoppens.pro@gmail.com',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['adultes'],
+    interests: ['Appareils auditifs', "bouchons d'oreille"],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.solenecoppens.description',
     timetable: [
       {
@@ -1054,10 +1068,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['adultes'],
+    interests: ['Psychiatrie générale', 'Troubles du sommeil '],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['fraçais', 'espagnol'],
     description: 'specialists.guillermoduquebarrera.description',
     timetable: [
       {
@@ -1112,14 +1126,14 @@ export const allSpecialists = [
     mainDiscipline: 'sageFemme',
     avatar: '/images/specialists/aliciajadoul.jpg',
     contact: {
-      phone: '',
-      email: '',
+      phone: '0471/29.34.06',
+      email: 'alicia.jadoul@hotmail.com',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes'],
+    interests: ['Accompagnement prénatal', 'grossesse', 'post partum'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['Français'],
     description: 'specialists.aliciajadoul.description',
     timetable: [
       {
@@ -1239,10 +1253,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes', 'Enfants'],
+    interests: ['Orthopédie', 'Traumatologie'],
     locations: ['Auderghem', 'Koekelberg'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.marcderoose.description',
     timetable: [
       {
@@ -1301,14 +1315,14 @@ export const allSpecialists = [
     mainDiscipline: 'reflexionPlantaire',
     avatar: '/images/specialists/zakiya.jpg',
     contact: {
-      phone: '',
+      phone: '0471 21 83 21',
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Bébés', 'Enfants'],
+    interests: ['Massage pédiatriques', 'réflexologie '],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['Français', 'arabe'],
     description: 'specialists.zakiyaserouane.description',
     timetable: [
       {
@@ -1368,10 +1382,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Enfants', 'Adultes'],
+    interests: ['dentisterie générale'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.nguyen.description',
     timetable: [
       {
@@ -1430,10 +1444,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Enfants', 'Adultes'],
+    interests: ['dentisterie générale', 'endodontie'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.paulortega.description',
     timetable: [
       {
@@ -1493,10 +1507,10 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Enfants', 'adultes'],
+    interests: ['Invisalign', 'prothèses dentaires', 'dentisterie esthétique'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.hanentliba.description',
     timetable: [
       {
@@ -1556,9 +1570,9 @@ export const allSpecialists = [
       web: '',
     },
     patients: [],
-    interests: [],
+    interests: ['Adultes'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français', 'anglais'],
     description: 'specialists.shalamohammad.description',
     timetable: [
       {
@@ -1613,13 +1627,19 @@ export const allSpecialists = [
     avatar: '/images/specialists/marlenevanel.jpeg',
     contact: {
       phone: '',
-      email: '',
+      email: 'marlenevanel@hotmail.com',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Enfants', 'adultes'],
+    interests: [
+      'Bilan neuropsychologique',
+      'Evaluation QI',
+      'TDAH',
+      'Troubles apprentissage',
+      'Expertises ',
+    ],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.marlenevanel.description',
     timetable: [
       {
@@ -1674,14 +1694,23 @@ export const allSpecialists = [
     mainDiscipline: 'psychologie',
     avatar: '/images/specialists/catalinadecock.jpg',
     contact: {
-      phone: '',
-      email: '',
+      phone: '0484/48.99.32',
+      email: 'decockcatalina@gmail.com',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Enfants', 'adultes'],
+    interests: [
+      'Psychologue clinicienne',
+      'Nutritionniste',
+      'Troubles digestifs',
+      'Troubles alimentaires',
+      'Burn-Out',
+      'Fatigue Chronique',
+      'TDAH',
+      'Nutrition grossesse',
+    ],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français', 'espagnol'],
     description: 'specialists.catalinadecock.description',
     timetable: [
       {
@@ -1736,14 +1765,14 @@ export const allSpecialists = [
     mainDiscipline: 'osteopathie',
     avatar: '/images/specialists/pescodashley.jpeg',
     contact: {
-      phone: '',
-      email: '',
+      phone: '0490/21.71.32',
+      email: 'ashleypescod.osteo@gmail.com',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Pédiatrie', 'Enfants', 'adultes'],
+    interests: ['Grossesses', 'post-partum', 'pédiatrie'],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.pescodashley.description',
     timetable: [
       {
@@ -1805,10 +1834,20 @@ export const allSpecialists = [
       email: '',
       web: '',
     },
-    patients: [],
-    interests: [],
+    patients: ['Adultes'],
+    interests: [
+      'désir',
+      'libido',
+      'angoisse de performance',
+      'vaginisme',
+      'douleurs',
+      'érection',
+      'éjaculation',
+      'anorgasmie',
+      'etc',
+    ],
     locations: ['Auderghem'],
-    languages: [],
+    languages: ['français'],
     description: 'specialists.deprejuliette.description',
     timetable: [
       {
