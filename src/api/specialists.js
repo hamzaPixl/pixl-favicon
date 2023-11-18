@@ -204,7 +204,7 @@ export const allSpecialists = [
     },
     patients: [],
     interests: [],
-    locations: ['Koekelberg'],
+    locations: ['Koekelberg', 'Auderghem'],
     languages: [],
     description: 'specialists.loubnacherqi.description',
     timetable: [
@@ -212,7 +212,9 @@ export const allSpecialists = [
         day: 1,
         locations: [
           {
-            location: 'Koekelberg',
+            location: 'Auderghem',
+            am: true,
+            pm: true,
           },
         ],
       },
@@ -230,7 +232,9 @@ export const allSpecialists = [
         day: 3,
         locations: [
           {
-            location: 'Koekelberg',
+            location: 'Auderghem',
+            am: true,
+            pm: true,
           },
         ],
       },
@@ -250,6 +254,10 @@ export const allSpecialists = [
           {
             location: 'Koekelberg',
             pm: true,
+          },
+          {
+            location: 'Auderghem',
+            am: true,
           },
         ],
       },
