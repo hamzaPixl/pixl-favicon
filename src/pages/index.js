@@ -34,20 +34,14 @@ export default function Home() {
       </div>
 
       <div className='flex md:hidden relative overflow-hidden'>
-        <video
-          class='w-full h-auto max-w-full'
-          autoPlay
-          loop
-          muted
-          style={{
-            width: '100%',
-            height: 'auto',
-            filter: 'brightness(70%)',
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `<video autoplay loop muted playsinline>
+      <source src="/images/hero.mp4" type="video/mp4" />
+      Votre brower ne supporte pas la vidéo
+</video>`,
           }}
-        >
-          <source src='/images/hero.mp4' type='video/mp4' />
-          Votre brower ne supporte pas la vidéo
-        </video>
+        />
         <div className='absolute top-0 left-0 w-full h-full flex flex-col gap-4 items-center justify-center p-6 bg-black/70'>
           <Button message={t('header.appointment')} link={injected.rdv} />
           <div className='flex flex-row gap-10 justify-between items-center text-center'>
