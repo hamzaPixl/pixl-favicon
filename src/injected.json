@@ -4,12 +4,12 @@
   "description": "54cutz salon de coiffure",
   "manifest": {
     "projectShortName": "54cutz salon de coiffure",
-    "themeColor": "#ffffff",
+    "themeColor": "#000000",
     "url": "https://www.54cutz.be/",
     "description": "54cutz salon de coiffure",
     "display": "standalone",
     "orientation": "portrait",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "#000000"
   },
   "gtag": "G-xxxxx",
 
