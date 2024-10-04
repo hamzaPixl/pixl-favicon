@@ -10,9 +10,20 @@ const withPWA = require('next-pwa')({
   disable: process.env.NODE_ENV === 'development',
 })
 
-module.exports = withPlugins([optimizedImages, withPWA, withImages], {
-  i18n: {
-    locales: injected.locales,
-    defaultLocale: injected.defaultLocale,
+module.exports = withPlugins(
+  [
+    optimizedImages,
+    withPWA,
+    withImages({
+      images: {
+        domains: ['flowbite.s3.amazonaws.com'],
+      },
+    }),
+  ],
+  {
+    i18n: {
+      locales: injected.locales,
+      defaultLocale: injected.defaultLocale,
+    },
   },
-})
+)

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: http://preview.medistia.com
+Host: https://54cutz.com
 
 # Sitemaps
-Sitemap: http://preview.medistia.com/sitemap.xml
+Sitemap: https://54cutz.com/sitemap.xml

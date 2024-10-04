@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'http://preview.medistia.com', // TODO: Change this to your domain
+  siteUrl: 'https://54cutz.com',
   generateRobotsTxt: true,
 }

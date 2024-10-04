@@ -1,17 +1,18 @@
 {
-  "keywords": ["medical", "center", "medistia", "psychologie"],
-  "title": "Medistia medical center",
-  "description": "Medistia medical center",
+  "keywords": ["coiffure", "homme", "54cutz", "salon"],
+  "title": "54cutz salon de coiffure",
+  "description": "54cutz salon de coiffure",
   "manifest": {
-    "projectShortName": "Medistia medical center",
+    "projectShortName": "54cutz salon de coiffure",
     "themeColor": "#ffffff",
-    "url": "https://www.medistia.be/",
-    "description": "Medistia medical center",
+    "url": "https://www.54cutz.be/",
+    "description": "54cutz salon de coiffure",
     "display": "standalone",
     "orientation": "portrait",
     "backgroundColor": "#ffffff"
   },
-  "gtag": "G-4D172TWJ4H",
+  "gtag": "G-xxxxx",
+
   "pages": [
     {
       "title": "link.home",
@@ -21,82 +22,37 @@
         "description": "home.meta.description",
         "keywords": []
       }
-    },
-    {
-      "title": "link.disciplines",
-      "link": "/disciplines",
-      "meta": {
-        "title": "disciplines.meta.title",
-        "description": "disciplines.meta.description",
-        "keywords": ["disciplines", "doctor"]
-      }
-    },
-    {
-      "title": "link.specialists",
-      "link": "/specialists",
-      "meta": {
-        "title": "specialists.meta.title",
-        "description": "specialists.meta.description",
-        "keywords": ["specialists", "doctor"]
-      }
-    },
-
-    {
-      "title": "link.about",
-      "link": "/about",
-      "meta": {
-        "title": "about.meta.title",
-        "description": "about.meta.description",
-        "keywords": ["about"]
-      }
-    },
-    {
-      "title": "link.news",
-      "link": "/news",
-      "meta": {
-        "title": "news.meta.title",
-        "description": "news.meta.description",
-        "keywords": ["news", "blog"]
-      }
-    },
-    {
-      "title": "link.contact",
-      "link": "/contact",
-      "meta": {
-        "title": "contact.meta.title",
-        "description": "contact.meta.description",
-        "keywords": ["contact"]
-      }
     }
   ],
   "socials": [
     {
-      "title": "facebook",
-      "link": "https://www.facebook.com/profile.php?id=100093811826892"
+      "title": "snapchat",
+      "link": "https://www.snapchat.com/add/i54cutz"
     },
     {
       "title": "instagram",
-      "link": "https://www.instagram.com/centre_medistia_/"
+      "link": "https://www.instagram.com/54cutz"
     },
     {
-      "title": "linkedin",
-      "link": "https://www.linkedin.com/feed/?trk=onboarding-landing"
+      "title": "tiktok",
+      "link": "https://www.tiktok.com/@isma54_"
     }
   ],
   "sla": [],
   "address": {
-    "url": "https://goo.gl/maps/3PUt1WiDQX2icvds5",
-    "address": "Chau. de Wavre 1341, 1160 Auderghem, Belgique"
+    "url": "https://maps.app.goo.gl/MeD6JCeBeRzEVMH97",
+    "address": "Chau. de Charleroi 45, 1360 Perwez"
   },
-  "companyName": "Medistia SRL",
-  "tel": "02/672.23.75",
-  "email": "info@medistia.be",
-  "web": "http://www.medistia.be",
-  "tva": "BE 0794.537.292",
+  "companyName": "54cutz",
+  "tel": "02/xxxxx",
+  "email": "contact@54cutz.com",
+  "web": "https://www.54cutz.com",
+  "tva": "BE XXXXXX",
+  "rdv": "https://www.planity.com/fr-BE",
   "locales": ["fr"],
   "defaultLocale": "fr",
   "author": {
-    "name": "Clevertech",
-    "url": "https://www.clevertech.be"
+    "name": "Pixl",
+    "url": "https://www.pixldev.be"
   }
 }
