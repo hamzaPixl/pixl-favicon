@@ -42,7 +42,7 @@ export default function Home() {
 </video>`,
           }}
         />
-        <div className='absolute top-0 left-0 w-full h-full flex flex-col gap-4 items-center justify-center p-6 bg-black/70'>
+        <div className='absolute top-0 left-0 w-full h-full flex flex-col gap-4 items-center justify-center p-6 bg-black/40'>
           <Button message={t('header.appointment')} link={injected.rdv} />
           <div className='flex flex-row gap-10 justify-between items-center text-center'>
             {injected.socials.map((item, index) => (
