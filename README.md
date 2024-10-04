@@ -1,7 +1,7 @@
 # 54cutz
 
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/clevertech-be/54cutz/blob/master/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/clevertech-be/54cutz/commits/master)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/hamzaPixl/54cutz/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/hamzaPixl/54cutz/commits/master)
 
 <br />
 <p align="center">
@@ -9,14 +9,14 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/clevertech-be/54cutz/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/hamzaPixl/54cutz/blob/master/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://54cutz.be/">View Demo</a>
     ·
-    <a href="https://github.com/clevertech-be/54cutz/issues">Report Bug</a>
+    <a href="https://github.com/hamzaPixl/54cutz/issues">Report Bug</a>
     ·
-    <a href="https://github.com/clevertech-be/54cutz/issues">Request Feature</a>
+    <a href="https://github.com/hamzaPixl/54cutz/issues">Request Feature</a>
   </p>
 </p>
 
@@ -53,50 +53,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Hamza Mounir - hamza@clevertech.be
-Rachid Asli - rachid@clevertech.be
+Hamza Mounir - hamza@pixldev.be
 
 ## Link
-
-## TimeSheet
-
-### 19/08 - 10h
-
-- [x] design sytem
-- [x] header
-- [x] footer
-- [x] discipline card
-- [x] article card
-- [x] view more news
-- [x] about home
-- [x] info box
-  - [x] newsletter
-  - [x] recruit
-  - [x] appointment
-
-### 23/08 - 7h
-
-- [x] home
-- [x] contact card
-- [x] hero
-- [x] responsive
-- [x] news
-- [x] about
-- [x] news [slug]
-
-### 25/08 - 10h
-
-- [x] contact
-- [x] faq
-- [x] bg fixes
-- [x] disciplines
-- [x] specialists
-- [x] specialists [slug]
-- [x] disciplines [slug]
-- [x] overlay
-- [x] timetable
-
-# Improvement
-
-- [x] correct intl
-- [x] move component to separeted file
