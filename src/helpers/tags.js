@@ -14,5 +14,5 @@ export function getFaviconRefs(manifest) {
       (linkProps) =>
         `<link key="${linkProps.src}" ${linkProps.rel ? `rel="${linkProps.rel}"` : ''} ${linkProps.sizes ? `sizes="${linkProps.sizes}"` : ''} href="${linkProps.src}" />`,
     )
-    .join('n')
+    .join('\n')
 }
