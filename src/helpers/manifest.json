@@ -1,7 +1,7 @@
 {
-  "name": "pixl-favicon",
-  "short_name": "pixl-favicon",
-  "description": "Pixl - Générateur de favicon",
+  "name": "example",
+  "short_name": "example",
+  "description": "example",
   "icons": [
     {
       "src": "/favicon/android-chrome-36x36.png",

@@ -1,4 +1,6 @@
 # compiled output
+public/uploads
+
 dist
 node_modules
 temp

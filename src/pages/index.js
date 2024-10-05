@@ -1,330 +1,210 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Label } from 'flowbite-react'
+import { useRouter } from 'next/router'
 import Layout from '../components/layout'
-import Button from '../components/button'
-import { useTranslate } from '../hooks/useTranslate'
 import Container from '../components/container'
-import injected from '../injected.json'
-import Link from 'next/link'
 import Image from 'next/image'
+import Table from '../components/table'
+import CodeBlock from '../components/code_block'
 
 export default function Home() {
-  const { t } = useTranslate()
+  const router = useRouter()
+  const [file, setFile] = useState(null)
+  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState(null)
+  const [url, setUrl] = useState('')
+
+  useEffect(() => {
+    const dropzoneFile = document.getElementById('dropzone-file')
+    dropzoneFile.addEventListener('change', (e) => {
+      if (e.target.files.length > 1) {
+        setError('Only one file at a time')
+      } else {
+        if (!e.target.files[0].type.includes('image')) {
+          setError('Invalid file type')
+          return
+        }
+        setLoading(true)
+        setFile(e.target.files[0])
+        setError(null)
+      }
+    })
+  }, [])
+
+  const handleUrlChange = async (e) => {
+    const url = e.target.value
+    setUrl(url)
+    if (url) {
+      try {
+        const response = await fetch(url)
+        if (!response.headers.get('content-type').startsWith('image')) {
+          console.error('The URL is not an image')
+          setError('The URL is not an image')
+          return
+        }
+        setLoading(true)
+        setFile(new File([await response.blob()], 'image.jpg'))
+        setError(null)
+        setUrl('')
+      } catch (error) {
+        console.error('Error fetching the image:', error)
+        setError('Error fetching the image')
+      }
+    }
+  }
+
+  useEffect(() => {
+    if (file) {
+      const formData = new FormData()
+      formData.append('file', file)
+
+      fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (!data.success) {
+            setLoading(false)
+            setError(data.message)
+            setFile(null)
+          } else {
+            setLoading(false)
+            setResult(data)
+          }
+        })
+        .catch(() => {
+          setLoading(false)
+          setError('An error occurred')
+          setFile(null)
+        })
+    }
+  }, [file])
+
   return (
     <Layout>
-      <div className='w-full bg-[image:url(/images/hero.png)] bg-cover bg-center bg-no-repeat relative h-[485px] items-center hidden md:flex'>
-        <div className='text-white h-full w-full flex flex-col gap-4 items-center justify-center p-6 bg-black/70'>
-          <div className='max-w-screen-xl mx-auto flex flex-col gap-4'>
-            <Button message={t('header.appointment')} link={injected.rdv} />
-            <div className='flex flex-row gap-10 justify-between items-center text-center'>
-              {injected.socials.map((item, index) => (
-                <Link key={index} className='text-white bg-red-600 p-4 rounded-md' href={item.link}>
-                  <Image
-                    loading='lazy'
-                    width={25}
-                    height={25}
-                    className='cursor-pointer hover:scale-110 transform transition-transform duration-300'
-                    src={`/icons/${item.title}.svg`}
-                    alt={`Social ${item.title} - ${item.link}`}
-                  />
-                </Link>
-              ))}
+      <Container>
+        {!file && (
+          <div className='flex flex-col gap-4 items-center'>
+            <div className='mb-4 p-4 bg-gray-100 text-gray-700 rounded-lg dark:bg-gray-800 dark:text-gray-200 shadow-md text-center'>
+              <h1 className='text-2xl font-bold'>Upload your image</h1>
+              <p className='text-sm text-gray-500 dark:text-gray-400'>
+                You can upload an image from your computer or provide a URL
+              </p>
+            </div>
+            <div className='p-4 bg-gray-100 text-gray-700 rounded-lg dark:bg-gray-800 dark:text-gray-200 shadow-md'>
+              <input
+                type='text'
+                placeholder='Enter image URL'
+                value={url}
+                onChange={handleUrlChange}
+                className='p-2 border rounded'
+              />
+            </div>
+            <div className='inline-flex items-center justify-center w-full'>
+              <hr className='w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700' />
+              <div className='absolute text-center my-2 text-black bg-white p-2'>OR</div>
+            </div>
+            <div className='flex flex-col w-full items-center justify-center'>
+              <Label htmlFor='dropzone-file' className='mb-2 hidden'>
+                Product Images
+              </Label>
+              <div className='flex w-full items-center justify-center'>
+                <Label
+                  htmlFor='dropzone-file'
+                  className='flex h-64 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-600 shadow-md'
+                >
+                  <div className='flex flex-col items-center justify-center pb-6 pt-5'>
+                    <svg
+                      aria-hidden
+                      className='mb-3 h-10 w-10 text-gray-400'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth='2'
+                        d='M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12'
+                      />
+                    </svg>
+                    <p className='mb-2 text-sm text-gray-500 dark:text-gray-400'>
+                      <span className='font-semibold'>Click to upload</span>
+                      &nbsp;or drag and drop
+                    </p>
+                    <p className='text-xs text-gray-500 dark:text-gray-400'>
+                      SVG, PNG, JPG or GIF (MAX. 800x400px)
+                    </p>
+                  </div>
+                  <input id='dropzone-file' name='dropzone-file' type='file' className='hidden' />
+                </Label>
+              </div>
+              <div>
+                {error && (
+                  <div className='mt-4 p-4 bg-red-100 text-red-700 rounded-lg dark:bg-red-800 dark:text-red-200'>
+                    {error}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        )}
 
-      <div className='flex md:hidden relative overflow-hidden'>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `<video autoplay loop muted playsinline>
-      <source src="/images/hero.mp4" type="video/mp4" />
-      Votre brower ne supporte pas la vidéo
-</video>`,
-          }}
-        />
-        <div className='absolute top-0 left-0 w-full h-full flex flex-col gap-4 items-center justify-center p-6 bg-black/40'>
-          <Button message={t('header.appointment')} link={injected.rdv} />
-          <div className='flex flex-row gap-10 justify-between items-center text-center'>
-            {injected.socials.map((item, index) => (
-              <Link key={index} className='text-white bg-red-600 p-4 rounded-md' href={item.link}>
-                <Image
-                  loading='lazy'
-                  width={25}
-                  height={25}
-                  className='cursor-pointer hover:scale-110 transform transition-transform duration-300'
-                  src={`/icons/${item.title}.svg`}
-                  alt={`Social ${item.title} - ${item.link}`}
-                />
-              </Link>
-            ))}
+        {loading && (
+          <div className='mt-4 p-4 bg-gray-100 text-gray-700 rounded-lg dark:bg-gray-800 dark:text-gray-200'>
+            Loading...
           </div>
-        </div>
-      </div>
+        )}
 
-      <Container id='#services'>
-        <div className='text-white flex flex-col gap-4 justify-center items-center text-center'>
-          <div className='text-2xl font-bold bg-red-600 p-2'>{t('home.services.title')}</div>
-          <div className='text-base max-w-xl'>{t('home.services.description')}</div>
-        </div>
-        <Image
-          className='rounded-md bg-white p-2'
-          loading='lazy'
-          width={300}
-          height={300}
-          src='/images/services.png'
-          alt='Image'
-        />
-        <div className='flex flex-col gap-4 justify-center items-center flex-wrap text-white'>
-          <div className='text-base max-w-xl'>{t('home.services.description.1')}</div>
-          <div className='text-base max-w-xl'>{t('home.services.description.2')}</div>
-          <div className='text-base max-w-xl'>{t('home.services.description.3')}</div>
-          <div className='text-base max-w-xl'>{t('home.services.description.4')}</div>
-        </div>
-      </Container>
+        {result && (
+          <div className='flex flex-col gap-4 justify-center items-center'>
+            <div className='flex flex-col gap-4 justify-center items-center'>
+              <Image
+                className='rounded-lg shadow-md'
+                height={300}
+                placeholder='blur'
+                blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII='
+                width={300}
+                src={result.url}
+                alt={result.base.name}
+              />
+              <div className='mt-4 p-4 bg-green-100 text-green-700 rounded-lg dark:bg-green-800 dark:text-green-200 shadow-lg'>
+                <p>File uploaded successfully</p>
+                <p>File name: {result.base.name}</p>
+                <p>File size: {result.base.size}</p>
+                <p>File type: {result.base.type}</p>
+                <p>Request cid: {result.cid}</p>
+              </div>
+            </div>
 
-      <Container id='#gallery'>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-          <div className='grid gap-4'>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-          <div className='grid gap-4'>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-          <div className='grid gap-4'>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-          <div className='grid gap-4'>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-            <div>
-              <Image
-                className='h-auto max-w-full rounded-lg'
-                src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg'
-                alt=''
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-        </div>
-      </Container>
-
-      <Container id='#team'>
-        <div className='text-white flex flex-col justify-center text-center gap-4'>
-          <div className='text-2xl font-bold bg-red-600 p-2'>{t('home.team.title')}</div>
-          <div className='text-base max-w-xl'>{t('home.team.description')}</div>
-        </div>
-        <div className='flex flex-row gap-4 justify-center items-center flex-wrap'>
-          <div className='bg-white p-6 group flex flex-col gap-4 hover:bg-red-600 hover:transition-all hover:scale-105 hover:duration-300 duration-300'>
-            <Image
-              loading='lazy'
-              width={250}
-              height={250}
-              className='rounded-md'
-              src='/images/coiffeur.png'
-              alt='Image'
-            />
-            <div>
-              <div className='text-black font-bold group-hover:text-white'>John Doe</div>
-              <div className='text-red-500 group-hover:text-white'>CEO</div>
-            </div>
-          </div>
-          <div className='bg-white p-6 group flex flex-col gap-4 hover:bg-red-600 hover:transition-all hover:scale-105 hover:duration-300 duration-300'>
-            <Image
-              loading='lazy'
-              width={250}
-              height={250}
-              className='rounded-md'
-              src='/images/coiffeur.png'
-              alt='Image'
-            />
-            <div>
-              <div className='text-black font-bold group-hover:text-white'>John Doe</div>
-              <div className='text-red-500 group-hover:text-white'>CEO</div>
-            </div>
-          </div>
-        </div>
-      </Container>
-
-      <Container id='#contact'>
-        <div className='flex flex-col md:flex-row'>
-          <div className='bg-white p-10 flex flex-col gap-4 justify-center items-left'>
-            <div className='text-2xl font-bold text-black'>{t('home.contact.title')}</div>
-            <div className='flex gap-2 text-center'>
-              <Image
-                loading='lazy'
-                width={24}
-                height={24}
-                src='/icons/phone-primary.svg'
-                alt='Icon tel'
-              />
-              <Link
-                className='text-black hover:text-red-600 hover:translate-x-1 transition-transform ease-in-out duration-300'
-                href={`tel:${injected.tel}`}
+            <div className='flex flex-row gap-4 justify-center items-center'>
+              <button
+                className='shadow-md bg-blue-500 hover:bg-white hover:text-blue-500 text-white font-bold py-2 px-4 rounded border-2 border-blue-500 hover:border-blue-500'
+                onClick={() => {
+                  router.reload()
+                }}
               >
-                {injected.tel}
-              </Link>
-            </div>
-            <div className='flex gap-2 text-center'>
-              <Image
-                loading='lazy'
-                width={24}
-                height={24}
-                src='/icons/mail-primary.svg'
-                alt='Icon mail'
-              />
-              <Link
-                className='text-black hover:text-red-600 hover:translate-x-1 transition-transform ease-in-out duration-300'
-                href={`mailto:${injected.email}`}
+                Upload another file
+              </button>
+              <a
+                href={result.zip_url}
+                download='pixl-favicons.zip'
+                className='shadow-md bg-green-500 hover:bg-white hover:text-green-500 text-white font-bold py-2 px-4 rounded border-2 border-green-500 hover:border-green-500'
               >
-                {injected.email}
-              </Link>
+                Download zip
+              </a>
             </div>
-            <div className='flex gap-2 text-center'>
-              <Image
-                loading='lazy'
-                width={24}
-                height={24}
-                src='/icons/location.svg'
-                alt='Icon address'
-              />
-              <Link
-                href={injected.address.url}
-                className='text-black hover:text-red-600 hover:translate-x-1 transition-transform ease-in-out duration-300'
-              >
-                {injected.address.address}
-              </Link>
-            </div>
+            {result.processed?.manifest && (
+              <div className='shadow-md mt-4 gap-4 flex flex-col p-4 bg-gray-100 text-gray-700 rounded-lg dark:bg-gray-800 dark:text-gray-200'>
+                <CodeBlock code={result.processed.tags} />
+                <Table data={result.processed.files} />
+              </div>
+            )}
           </div>
-          <div className='bg-red-600 p-10 flex flex-col gap-4 justify-center items-left'>
-            <div className='flex flex-row gap-2'>
-              <Image loading='lazy' width={24} height={24} src='/icons/time.svg' alt='Image' />
-              <div className='text-2xl font-bold text-white'>{t('home.horaire.title')}</div>
-            </div>
-            <div className='text-white flex flex-row gap-2'>
-              <h3>Lundi :</h3>
-              <p>Fermé</p>
-            </div>
-            <div className='text-white flex flex-row gap-2 font-bold'>
-              <h3>Mardi :</h3>
-              <p>10h - 20h</p>
-            </div>
-            <div className='text-white flex flex-row gap-2 font-bold'>
-              <h3>Mercredi :</h3>
-              <p>10h - 20h</p>
-            </div>
-            <div className='text-white flex flex-row gap-2 font-bold'>
-              <h3>Jeudi :</h3>
-              <p>10h - 20h</p>
-            </div>
-            <div className='text-white flex flex-row gap-2 font-bold'>
-              <h3>Vendredi :</h3>
-              <p>10h - 20h</p>
-            </div>
-            <div className='text-white flex flex-row gap-2 font-bold'>
-              <h3>Samedi :</h3>
-              <p>10h - 15h</p>
-            </div>
-            <div className='text-white flex flex-row gap-2'>
-              <h3>Dimanche :</h3>
-              <p>Fermé</p>
-            </div>
-          </div>
-        </div>
+        )}
       </Container>
     </Layout>
   )

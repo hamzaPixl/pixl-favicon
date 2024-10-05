@@ -1,21 +1,16 @@
-import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Header() {
   return (
-    <nav
-      className={
-        'z-50 sticky top-0 mx-auto overflow-auto transition-all duration-300 ease-in-out bg-black text-white'
-      }
-    >
-      <div className={`p-4 md:p-8 w-full max-w-screen-xl mx-auto`}>
-        <div className='font-bold leading-normal w-full flex items-center justify-center'>
-          <Link href={'/'} className='w-[182px] h-[56px] md:h-[70px] md:w-[228px] relative'>
-            <Image loading='lazy' fill src='/logo.png' alt={`Logo`} />
-          </Link>
+    <header className='rounded-none bg-white p-4 py-8 dark:bg-gray-800 md:p-8 lg:p-10 text-black'>
+      <div className='mx-auto max-w-screen-xl flex flex-row justify-between gap-4'>
+        <div className='flex flex-col gap-4 justify-center items-center'>
+          <Image src='/logo.png' alt='Pixl' width={100} height={100} />
+        </div>
+        <div className='flex flex-col gap-4 justify-center items-center'>
+          <h1 className='text-xl font-bold'>Favicon tool</h1>
         </div>
       </div>
-    </nav>
+    </header>
   )
 }

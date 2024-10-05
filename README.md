@@ -1,4 +1,4 @@
-# 54cutz
+# pixl-favicon
 
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/hamzaPixl/54cutz/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/hamzaPixl/54cutz/commits/master)

@@ -1,12 +1,12 @@
 {
-  "keywords": ["coiffure", "homme", "54cutz", "salon"],
-  "title": "54cutz salon de coiffure",
-  "description": "54cutz salon de coiffure",
+  "keywords": ["favicon", "generator", "web", "manifes"],
+  "title": "Tool to generate you favicon folder for you web application.",
+  "description": "Tool to generate you favicon folder for you web application.",
   "manifest": {
-    "projectShortName": "54cutz salon de coiffure",
+    "projectShortName": "Tool to generate you favicon folder for you web application.",
     "themeColor": "#000000",
     "url": "https://www.54cutz.be/",
-    "description": "54cutz salon de coiffure",
+    "description": "Tool to generate you favicon folder for you web application.",
     "display": "standalone",
     "orientation": "portrait",
     "backgroundColor": "#000000"
@@ -24,31 +24,13 @@
       }
     }
   ],
-  "socials": [
-    {
-      "title": "snapchat",
-      "link": "https://www.snapchat.com/add/i54cutz"
-    },
-    {
-      "title": "instagram",
-      "link": "https://www.instagram.com/54cutz"
-    },
-    {
-      "title": "tiktok",
-      "link": "https://www.tiktok.com/@isma54_"
-    }
-  ],
+  "socials": [],
   "sla": [],
-  "address": {
-    "url": "https://maps.app.goo.gl/MeD6JCeBeRzEVMH97",
-    "address": "Chau. de Charleroi 45, 1360 Perwez"
-  },
   "companyName": "54cutz",
   "tel": "02/xxxxx",
   "email": "contact@54cutz.com",
   "web": "https://www.54cutz.com",
   "tva": "BE XXXXXX",
-  "rdv": "https://www.planity.com/fr-BE",
   "locales": ["fr"],
   "defaultLocale": "fr",
   "author": {
