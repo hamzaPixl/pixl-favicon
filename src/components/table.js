@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Table({ data }) {
   return (
     <div className='relative overflow-x-auto'>
@@ -20,13 +22,15 @@ export default function Table({ data }) {
               </td>
               <td className='px-6 py-4 whitespace-nowrap'>
                 <div className='flex items-center'>
-                  <a
+                  <Link
+                    rel='noopener noreferrer'
+                    target='_blank'
                     className='text-green-500 hover:text-green-900'
                     href={file.url}
                     download={file.name}
                   >
                     Download
-                  </a>
+                  </Link>
                 </div>
               </td>
             </tr>

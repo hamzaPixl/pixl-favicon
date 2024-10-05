@@ -6,6 +6,7 @@ import Container from '../components/container'
 import Image from 'next/image'
 import Table from '../components/table'
 import CodeBlock from '../components/code_block'
+import Link from 'next/link'
 
 export default function Home() {
   const router = useRouter()
@@ -189,13 +190,15 @@ export default function Home() {
               >
                 Upload another file
               </button>
-              <a
+              <Link
+                rel='noopener noreferrer'
+                target='_blank'
                 href={result.zip_url}
                 download='pixl-favicons.zip'
                 className='shadow-md bg-green-500 hover:bg-white hover:text-green-500 text-white font-bold py-2 px-4 rounded border-2 border-green-500 hover:border-green-500'
               >
                 Download zip
-              </a>
+              </Link>
             </div>
             {result.processed?.manifest && (
               <div className='shadow-md mt-4 gap-4 flex flex-col p-4 bg-gray-100 text-gray-700 rounded-lg dark:bg-gray-800 dark:text-gray-200'>
