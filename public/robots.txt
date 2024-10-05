@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://54cutz.com
+Host: https://favicon.pixldev.be
 
 # Sitemaps
-Sitemap: https://54cutz.com/sitemap.xml
+Sitemap: https://favicon.pixldev.be/sitemap.xml

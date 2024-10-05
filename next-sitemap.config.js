@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://54cutz.com',
+  siteUrl: 'https://favicon.pixldev.be',
   generateRobotsTxt: true,
 }

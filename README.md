@@ -1,22 +1,22 @@
 # pixl-favicon
 
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/hamzaPixl/54cutz/blob/master/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/hamzaPixl/54cutz/commits/master)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/hamzaPixl/pixl-favicon/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/hamzaPixl/pixl-favicon/commits/master)
 
 <br />
 <p align="center">
-  <h3 align="center">54cutz</h3>
+  <h3 align="center">Pixl - Favicon</h3>
 
   <p align="center">
     <br />
-    <a href="https://github.com/hamzaPixl/54cutz/blob/master/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/hamzaPixl/pixl-favicon/blob/master/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://54cutz.be/">View Demo</a>
+    <a href="https://favicon.pixldev.be/">View Demo</a>
     ·
-    <a href="https://github.com/hamzaPixl/54cutz/issues">Report Bug</a>
+    <a href="https://github.com/hamzaPixl/pixl-favicon/issues">Report Bug</a>
     ·
-    <a href="https://github.com/hamzaPixl/54cutz/issues">Request Feature</a>
+    <a href="https://github.com/hamzaPixl/pixl-favicon/issues">Request Feature</a>
   </p>
 </p>
 
