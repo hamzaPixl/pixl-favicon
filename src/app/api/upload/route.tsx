@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import path from 'path'
 import fs from 'fs'
-import { v4 } from 'uuid'
 import { generateFavicons } from '../../../helpers/favicon'
 import { archiveDirectory } from '../../../helpers/archiver'
 
@@ -12,13 +11,19 @@ export const POST = async (req: NextRequest) => {
   const formData = await req.formData()
   const body = Object.fromEntries(formData)
   const file = (body.file as Blob) || null
-
-  const cid = v4()
+  const cid = body.cid
 
   if (!file) {
     return NextResponse.json({
       success: false,
       message: 'No file found',
+    })
+  }
+
+  if (!cid) {
+    return NextResponse.json({
+      success: false,
+      message: 'No cid found',
     })
   }
 
@@ -59,8 +64,7 @@ export const POST = async (req: NextRequest) => {
     const processed = await generateFavicons(buffer, base_path, `${UPLOAD_DIR_NAME}/${cid}`)
 
     await archiveDirectory(`${UPLOAD_DIR}/${cid}/processed.zip`, `${UPLOAD_DIR}/${cid}/processed/`)
-
-    return NextResponse.json({
+    const document = {
       success: true,
       base: {
         content: buffer.toString('base64'),
@@ -72,7 +76,11 @@ export const POST = async (req: NextRequest) => {
       cid,
       zip_url: `/uploads/${cid}/processed.zip`,
       url: `/uploads/${cid}/${fileName}`,
-    })
+    }
+
+    fs.writeFileSync(path.resolve(base_path, 'document.json'), JSON.stringify(document, null, 2))
+
+    return NextResponse.json(document)
   } catch (e) {
     console.error(e)
     return NextResponse.json({

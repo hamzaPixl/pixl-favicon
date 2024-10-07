@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 export default function Table({ data }) {
   return (
-    <div className='relative overflow-x-auto'>
-      <table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400'>
-        <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
+    <div className='relative overflow-x-auto rounded-lg border-2 border-black'>
+      <table className='w-full text-sm text-left rtl:text-right text-gray-500'>
+        <thead className='text-xs text-gray-700 uppercase bg-gray-50'>
           <tr>
             <th scope='col' className='px-6 py-3'>
               File name
@@ -16,9 +16,9 @@ export default function Table({ data }) {
         </thead>
         <tbody>
           {data.map((file, index) => (
-            <tr key={index} className='bg-white border-b dark:bg-gray-800 dark:border-gray-700'>
+            <tr key={index} className='bg-white border-b'>
               <td className='px-6 py-4 whitespace-nowrap'>
-                <div className='text-sm font-medium text-gray-900 dark:text-white'>{file.name}</div>
+                <div className='text-sm font-medium text-gray-900'>{file.name}</div>
               </td>
               <td className='px-6 py-4 whitespace-nowrap'>
                 <div className='flex items-center'>
