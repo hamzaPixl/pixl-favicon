@@ -25,8 +25,12 @@ export default function RequestSlug() {
             throw new Error('Network response was not ok')
           }
           const data = await response.json()
-          setResult(data)
-          setLoading(false)
+          if (data.success) {
+            setResult(data)
+            setLoading(false)
+          } else {
+            throw new Error('Network response was not ok')
+          }
         }
       } catch (err) {
         if (attempt < 5) {

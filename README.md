@@ -56,3 +56,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Hamza Mounir - hamza@pixldev.be
 
 ## Link
+
+## TODO
+
+[] translation
+[] dark mode
+[] New favicon
+[] from emoji
+[] from text
+
+[] Server to accept requests
+
+[] Profile page
+[] Request history page
+
+[] Create maketing package for tool
